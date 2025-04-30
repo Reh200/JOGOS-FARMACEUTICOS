@@ -1,44 +1,44 @@
 const medications = [
-    { name: "Amoxicilina", image: "img/amoxicilina.jpeg", active: "Antibiótico" },
-    { name: "Amoxicilina", image: "img/amoxicilina.jpeg", active: "Antibiótico" },
-    { name: "Dipirona", image: "img/dipirona.webp", active: "Analgésico" },
-    { name: "Dipirona", image: "img/dipirona.webp", active: "Analgésico" },
-    { name: "Ibuprofeno", image: "img/ibuprofeno.webp", active: "Anti-inflamatório" },
-    { name: "Ibuprofeno", image: "img/ibuprofeno.webp", active: "Anti-inflamatório" },
-    { name: "Paracetamol", image: "img/paracetamol.webp", active: "Antitérmico" },
-    { name: "Paracetamol", image: "img/paracetamol.webp", active: "Antitérmico" },
-    { name: "Captopril", image: "img/captopril.jpg", active: "Anti-hipertensivo" },
-    { name: "Captopril", image: "img/captopril.jpg", active: "Anti-hipertensivo" },
-    { name: "Omeprazol", image: "img/omeprazol.jpg", active: "Inibidor de bomba de prótons" },
-    { name: "Omeprazol", image: "img/omeprazol.jpg", active: "Inibidor de bomba de prótons" },
+    { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
+    { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
+    { name: "Dipirona", image: "img/dipirona.png", active: "Analgésico" },
+    { name: "Dipirona", image: "img/dipirona.png", active: "Analgésico" },
+    { name: "Ibuprofeno", image: "img/ibuprofeno.png", active: "Anti-inflamatório" },
+    { name: "Ibuprofeno", image: "img/ibuprofeno.png", active: "Anti-inflamatório" },
+    { name: "Paracetamol", image: "img/paracetamol.png", active: "Antitérmico" },
+    { name: "Paracetamol", image: "img/paracetamol.png", active: "Antitérmico" },
+    { name: "Captopril", image: "img/captopril.png", active: "Anti-hipertensivo" },
+    { name: "Captopril", image: "img/captopril.png", active: "Anti-hipertensivo" },
+    { name: "Omeprazol", image: "img/omeprazol.png", active: "Inibidor de bomba de prótons" },
+    { name: "Omeprazol", image: "img/omeprazol.png", active: "Inibidor de bomba de prótons" },
     { name: "Losartana", image: "img/losartana.png", active: "Anti-hipertensivo" },
     { name: "Losartana", image: "img/losartana.png", active: "Anti-hipertensivo" },
-    { name: "Loratadina", image: "img/loratadina.webp", active: "Antialérgico" },
-    { name: "Loratadina", image: "img/loratadina.webp", active: "Antialérgico" },
+    { name: "Loratadina", image: "img/loratadina.png", active: "Antialérgico" },
+    { name: "Loratadina", image: "img/loratadina.png", active: "Antialérgico" },
     { name: "Salmeterol", image: "img/salmeterol.png", active: "Broncodilatador" },
     { name: "Salmeterol", image: "img/salmeterol.png", active: "Broncodilatador" },
-    { name: "Cloridrato de Sertralina", image: "img/sertralina.jpg", active: "Antidepressivo" },
-    { name: "Cloridrato de Sertralina", image: "img/sertralina.jpg", active: "Antidepressivo" },
+    { name: "Cloridrato de Sertralina", image: "img/sertralina.png", active: "Antidepressivo" },
+    { name: "Cloridrato de Sertralina", image: "img/sertralina.png", active: "Antidepressivo" },
     { name: "Furosemida", image: "img/furosemida.png", active: "Diurético" },
     { name: "Furosemida", image: "img/furosemida.png", active: "Diurético" },
-    { name: "Metformina", image: "img/metformina.jpg", active: "Antidiabético" },
-    { name: "Metformina", image: "img/metformina.jpg", active: "Antidiabético" },
-    { name: "Dexametasona", image: "img/dexametasona.png", active: "Corticoide" },
-    { name: "Dexametasona", image: "img/dexametasona.png", active: "Corticoide" },
-    { name: "AAS", image: "img/aas.webp", active: "Antiagregante plaquetário" },
-    { name: "AAS", image: "img/aas.webp", active: "Antiagregante plaquetário" },
-    { name: "Diclofenaco", image: "img/diclofenaco.webp", active: "Anti-inflamatório" },
-    { name: "Diclofenaco", image: "img/diclofenaco.webp", active: "Anti-inflamatório" },
-    { name: "Amitriptilina", image: "img/amitriptilina.webp", active: "Antidepressivo" },
-    { name: "Amitriptilina", image: "img/amitriptilina.webp", active: "Antidepressivo" },
-    { name: "Tramadol", image: "img/tramadol.webp", active: "Analgesia opioide" },
-    { name: "Tramadol", image: "img/tramadol.webp", active: "Analgesia opioide" },
-    { name: "Cetoconazol", image: "img/cetoconazol.webp", active: "Antifúngico" },
-    { name: "Cetoconazol", image: "img/cetoconazol.webp", active: "Antifúngico" },
-    { name: "Trazodona", image: "img/trazodona.webp", active: "Antidepressivo" },
-    { name: "Trazodona", image: "img/trazodona.webp", active: "Antidepressivo" },
-    { name: "Ranitidina", image: "img/ranitidina.webp", active: "Antiácido" },
-    { name: "Ranitidina", image: "img/ranitidina.webp", active: "Antiácido" }
+    { name: "Metformina", image: "img/metformina.png", active: "Antidiabético" },
+    { name: "Metformina", image: "img/metformina.png", active: "Antidiabético" },
+    { name: "Dexametasona", image: " img/dexametasona.png ", active: " Corticoide" },
+    { name: "Dexametasona ", image: " img/dexametasona. png ", active: " Corticoide" },
+    { name: " AAS ", image: " img/aas. png ", active: " Antiagregante plaquetário" },
+    { name: " AAS ", image: " img/aas. png ", active: " Antiagregante plaquetário" },
+    { name: " Diclofenaco ", image: " img/diclofenaco. png ", active: " Anti-inflamatório" },
+    { name: " Diclofenaco ", image: " img/diclofenaco. png ", active: " Anti-inflamatório" },
+    { name: " Amitriptilina ", image: " img/amitriptilina. png ", active: " Antidepressivo" },
+    { name: " Amitriptilina ", image: " img/amitriptilina. png ", active: " Antidepressivo" },
+    { name: " Tramadol ", image: " img/tramadol. png ", active: " Analgesia opioide" },
+    { name: " Tramadol ", image: " img/tramadol. png ", active: " Analgesia opioide" },
+    { name: " Cetoconazol ", image: " img/cetoconazol. png ", active: " Antifúngico" },
+    { name: " Cetoconazol ", image: " img/cetoconazol. png ", active: " Antifúngico" },
+    { name: " Trazodona ", image: " img/trazodona. png ", active: " Antidepressivo" },
+    { name: " Trazodona ", image: " img/trazodona. png ", active: " Antidepressivo" },
+    { name: "Ranitidina", image: "img/ranitidina.png", active: "Antiácido" },
+    { name: "Ranitidina", image: "img/ranitidina.png", active: "Antiácido" }
 ];
 
 let flippedCards = [];
@@ -84,7 +84,7 @@ function createBoard() {
         card.classList.add("card");
         card.setAttribute("data-index", index);
         card.setAttribute("data-flipped", "false");
-        card.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`; // verso
+        card.style.backgroundImage = `url(img/medicamentos-capa.jpeg)`; // verso
         card.addEventListener("click", flipCard);
         board.appendChild(card);
     });
@@ -135,8 +135,8 @@ function checkMatch() {
         card2.setAttribute("data-flipped", "false");
         card1.innerHTML = "";
         card2.innerHTML = "";
-        card1.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
-        card2.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
+        card1.style.backgroundImage = `url(img/medicamentos-capa.jpeg)`;
+        card2.style.backgroundImage = `url(img/medicamentos-capa.jpeg)`;
     }
 
     flippedCards = [];
