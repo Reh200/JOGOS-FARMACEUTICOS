@@ -55,13 +55,11 @@ function shuffle(array) {
 }
 
 function startGame() {
-    // Esconde o botão de iniciar e exibe o botão de reiniciar
     document.getElementById("start-button").style.display = "none";
     document.getElementById("restart-button").style.display = "inline-block";
-
-    // Inicia o cronômetro
+    document.getElementById("instrucoes").style.display = "none"; // Esconde as instruções
     timer = setInterval(updateTime, 1000);
-    createBoard();
+    createBoard(); // Certifique-se de que essa função está definida corretamente
 }
 
 function updateTime() {
@@ -70,8 +68,6 @@ function updateTime() {
         seconds = 0;
         minutes++;
     }
-
-    // Exibe o tempo no formato MM:SS
     document.getElementById("timer").textContent = `Tempo: ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 }
 
@@ -101,7 +97,6 @@ function flipCard() {
 
     if (card.getAttribute("data-flipped") === "true" || flippedCards.length >= 2) return;
 
-    // Alterna entre mostrar imagem ou texto
     card.innerHTML = "";
     if (flippedCards.length === 0) {
         const img = document.createElement("img");
@@ -138,11 +133,8 @@ function checkMatch() {
         card2.classList.remove("flipped");
         card1.setAttribute("data-flipped", "false");
         card2.setAttribute("data-flipped", "false");
-
         card1.innerHTML = "";
         card2.innerHTML = "";
-
-        // Volta o verso
         card1.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
         card2.style.backgroundImage = `url(img/capa-medicamentos.jpeg)`;
     }

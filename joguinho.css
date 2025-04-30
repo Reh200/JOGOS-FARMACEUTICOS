@@ -7,28 +7,65 @@
 body {
   font-family: 'Arial', sans-serif;
   text-align: center;
-  background: linear-gradient(to bottom right, #f0f4f8, #dbe9f3);
+  background-color: #f0f4f8;
   padding: 20px;
   color: #333;
-  min-height: 100vh;
+  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
   position: relative;
-  padding-top: 60px;
+  padding-top: 60px; /* Adiciona espaço suficiente para o timer */
 }
 
 h1 {
   color: #244474;
   font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  position: relative;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header h1 {
+  color: #244474;
+  font-size: 2.2rem;
   margin-bottom: 10px;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.subtitulo {
-  font-size: 1.2rem;
+header .subtitulo {
+  font-size: 1.1rem;
   color: #555;
-  margin-top: -10px;
-  margin-bottom: 30px;
-  font-style: italic;
+  margin-bottom: 20px;
+}
+
+header button {
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header .subtitulo {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 .game-board {
@@ -52,9 +89,7 @@ h1 {
   position: relative;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.6s, box-shadow 0.2s ease;
-  transform-style: preserve-3d;
-  perspective: 1000px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
@@ -64,12 +99,10 @@ h1 {
 
 .card.flipped {
   background-color: #ffffff;
-  transform: rotateY(180deg);
 }
 
 .card.matched {
   background-color: #354ccf;
-  transform: scale(1.05);
 }
 
 .card img {
@@ -79,10 +112,10 @@ h1 {
 }
 
 .category-text {
-  font-size: 1rem;
+  font-size: 0.85rem;
   color: #fff;
-  background-color: #0e7fc2;
-  padding: 6px 10px;
+  background-color: #104f74;
+  padding: 6px 8px;
   border-radius: 8px;
   font-weight: bold;
   margin-top: 8px;
@@ -94,103 +127,10 @@ h1 {
   background-color: #3462b8;
 }
 
-button {
-  padding: 12px 24px;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  margin: 10px 5px;
-}
-
-button.iniciar {
-  background-color: #35428a;
-}
-
-button.iniciar:hover {
-  background-color: #386c8e;
-  transform: scale(1.05);
-}
-
-button.iniciar:active {
-  transform: scale(0.98);
-}
-
-button.reiniciar {
-  background-color: #28a745;
-}
-
-button.reiniciar:hover {
-  background-color: #218838;
-  transform: scale(1.05);
-}
-
-button.reiniciar:active {
-  transform: scale(0.98);
-}
-
-#timer {
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 8px 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  z-index: 10;
-}
-
-section.instrucoes, section.curiosidade {
-  background-color: #ffffff;
-  padding: 20px;
-  margin: 40px auto;
-  border-radius: 12px;
-  max-width: 900px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  text-align: left;
-}
-
-section.instrucoes h2,
-section.curiosidade h2 {
-  color: #244474;
-  margin-bottom: 10px;
-}
-
-section.instrucoes ul {
-  padding-left: 20px;
-}
-
-section.instrucoes li {
-  margin-bottom: 8px;
-  font-size: 1rem;
-}
-
-footer {
-  background-color: #244474;
-  color: #fff;
-  padding: 20px;
-  margin-top: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsivo */
+/* Responsivo para celulares */
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
-  }
-
-  .subtitulo {
-    font-size: 1rem;
     margin-bottom: 20px;
   }
 
@@ -203,9 +143,92 @@ footer {
     font-size: 0.75rem;
     padding: 5px 6px;
   }
+}
 
-  button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+/* Estilos gerais para ambos os botões */
+button {
+  padding: 12px 24px;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo específico para o botão de Iniciar */
+button.iniciar {
+  background-color: #35428a; /* Cor do botão Iniciar */
+}
+
+button.iniciar:hover {
+  background-color: #386c8e; /* Cor de hover para o botão Iniciar */
+  transform: scale(1.05);
+}
+
+button.iniciar:active {
+  transform: scale(0.98); /* Efeito ao clicar no botão Iniciar */
+}
+
+/* Estilo específico para o botão de Reiniciar */
+button.reiniciar {
+  margin-top: -20px; /* Move o botão reiniciar para cima */
+  background-color: #28a745; /* Cor verde para indicar reinício */
+}
+
+button.reiniciar:hover {
+  background-color: #218838; /* Cor de hover para o botão Reiniciar */
+  transform: scale(1.05);
+}
+
+button.reiniciar:active {
+  transform: scale(0.98); /* Efeito ao clicar no botão Reiniciar */
+}
+
+/* Estilos para o Timer fixado no topo da tela */
+#timer {
+  font-size: 18px;
+  color: #4CAF50;
+  font-weight: bold;
+  position: fixed;
+  top: 20px; /* Distância do topo da tela */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 10; /* Garante que o timer fique visível por cima dos outros elementos */
+}
+
+.instrucoes {
+  background-color: #e6f7ff;
+  color: #333;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  max-width: 800px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.instrucoes h2 {
+  margin-top: 0;
+  color: #0077b6;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.instrucoes ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
+}
+
+.instrucoes li {
+  margin-bottom: 0.8rem;
 }
