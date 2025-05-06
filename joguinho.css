@@ -76,6 +76,13 @@ header button {
   margin: 0 auto;
 }
 
+#medications-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
 .card {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -110,6 +117,7 @@ header button {
   height: 80%;
   object-fit: contain;
 }
+
 
 .category-text {
   font-size: 0.85rem;
