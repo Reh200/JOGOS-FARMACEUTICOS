@@ -42,7 +42,9 @@ const medications = [
     { name: "Bupropiona", image: "img/bupropiona.png", active: "Antidepressivo" },
     { name: "Bupropiona", image: "img/bupropiona.png", active: "Antidepressivo" },
     { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" },
-    { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" }
+    { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" },
+    { name: "Anlodipino", image: "img/anlodipino.png", active: "Anti-hipertensivo" },
+    { name: "Anlodipino", image: "img/anlodipino.png", active: "Anti-hipertensivo" }
 
 ];
 
