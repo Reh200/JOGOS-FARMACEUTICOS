@@ -19,10 +19,10 @@ body {
 /* Cabeçalho */
 header {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 12px;
+  padding: 4px;
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin: 0 auto 30px auto;
+  margin: 0 auto 10px auto;
   max-width: 900px;
   position: relative;
 }
@@ -49,7 +49,7 @@ header button {
 h1 {
   color: #244474;
   font-size: 2.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: bold;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -179,8 +179,8 @@ button.reiniciar:active {
 .instrucoes {
   background-color: #e6f7ff;
   color: #333;
-  padding: 20px;
-  margin: 20px auto;
+  padding: 15px;
+  margin: 15px auto;
   border-radius: 12px;
   max-width: 800px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

@@ -44,8 +44,11 @@ const medications = [
     { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" },
     { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" },
     { name: "Anlodipino", image: "img/anlodipino.png", active: "Anti-hipertensivo" },
-    { name: "Anlodipino", image: "img/anlodipino.png", active: "Anti-hipertensivo" }
-
+    { name: "Anlodipino", image: "img/anlodipino.png", active: "Anti-hipertensivo" },
+    { name: "Espironolactona", image: "img/espironolactona.png", active: "Anti-hipertensivo" },
+    { name: "Espironolactona", image: "img/espironolactona.png", active: "Anti-hipertensivo" },
+    { name: "Atorvastatina", image: "img/atorvastatina.png", active: "Hipolipemiante" },
+    { name: "Atorvastatina", image: "img/atorvastatina.png", active: "Hipolipemiante" }
 ];
 
 let flippedCards = [];
