@@ -1,3 +1,4 @@
+/* Reset e configuração global */
 * {
   margin: 0;
   padding: 0;
@@ -9,30 +10,21 @@ body {
   text-align: center;
   background-color: #f0f4f8;
   padding: 20px;
+  padding-top: 60px;
   color: #333;
-  min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+  min-height: 100vh;
   position: relative;
-  padding-top: 60px; /* Adiciona espaço suficiente para o timer */
 }
 
-h1 {
-  color: #244474;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  font-weight: bold;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
+/* Cabeçalho */
 header {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
-  position: relative;
+  margin: 0 auto 30px auto;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
 }
 
 header h1 {
@@ -53,36 +45,26 @@ header button {
   margin: 5px;
 }
 
-@media screen and (max-width: 600px) {
-  header h1 {
-    font-size: 1.6rem;
-  }
-
-  header .subtitulo {
-    font-size: 0.95rem;
-  }
-
-  button {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
+/* Título principal */
+h1 {
+  color: #244474;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.game-board {
+/* Grade do jogo */
+.game-board,
+#medications-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+  grid-template-columns: repeat(7, 1fr); /* Mais colunas, mais compacto */
   gap: 12px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-#medications-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
-  padding: 20px;
-}
-
+/* Estilo dos cards */
 .card {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -118,7 +100,7 @@ header button {
   object-fit: contain;
 }
 
-
+/* Texto da categoria */
 .category-text {
   font-size: 0.85rem;
   color: #fff;
@@ -135,25 +117,7 @@ header button {
   background-color: #3462b8;
 }
 
-/* Responsivo para celulares */
-@media screen and (max-width: 600px) {
-  h1 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-  .game-board {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .category-text {
-    font-size: 0.75rem;
-    padding: 5px 6px;
-  }
-}
-
-/* Estilos gerais para ambos os botões */
+/* Estilo geral dos botões */
 button {
   padding: 12px 24px;
   color: #fff;
@@ -166,52 +130,52 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Estilo específico para o botão de Iniciar */
+/* Botão iniciar */
 button.iniciar {
-  background-color: #35428a; /* Cor do botão Iniciar */
+  background-color: #35428a;
 }
 
 button.iniciar:hover {
-  background-color: #386c8e; /* Cor de hover para o botão Iniciar */
+  background-color: #386c8e;
   transform: scale(1.05);
 }
 
 button.iniciar:active {
-  transform: scale(0.98); /* Efeito ao clicar no botão Iniciar */
+  transform: scale(0.98);
 }
 
-/* Estilo específico para o botão de Reiniciar */
+/* Botão reiniciar */
 button.reiniciar {
-  margin-top: -20px; /* Move o botão reiniciar para cima */
-  background-color: #28a745; /* Cor verde para indicar reinício */
+  margin-top: -20px;
+  background-color: #28a745;
 }
 
 button.reiniciar:hover {
-  background-color: #218838; /* Cor de hover para o botão Reiniciar */
+  background-color: #218838;
   transform: scale(1.05);
 }
 
 button.reiniciar:active {
-  transform: scale(0.98); /* Efeito ao clicar no botão Reiniciar */
+  transform: scale(0.98);
 }
 
-/* Estilos para o Timer fixado no topo da tela */
+/* Timer fixo no topo */
 #timer {
   font-size: 18px;
-  color: #4CAF50;
+  color: white;
   font-weight: bold;
   position: fixed;
-  top: 20px; /* Distância do topo da tela */
+  top: 20px;
   left: 50%;
-  transform: translateX(-50%); /* Centraliza horizontalmente */
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.5);
-  color: white;
   padding: 8px 16px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  z-index: 10; /* Garante que o timer fique visível por cima dos outros elementos */
+  z-index: 10;
 }
 
+/* Instruções do jogo */
 .instrucoes {
   background-color: #e6f7ff;
   color: #333;
@@ -239,4 +203,50 @@ button.reiniciar:active {
 
 .instrucoes li {
   margin-bottom: 0.8rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 1024px) {
+  .game-board,
+  #medications-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .game-board,
+  #medications-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header .subtitulo {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .game-board,
+  #medications-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .category-text {
+    font-size: 0.75rem;
+    padding: 5px 6px;
+  }
 }

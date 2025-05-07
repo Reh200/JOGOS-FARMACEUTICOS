@@ -38,7 +38,12 @@ const medications = [
     { name: "Trazodona", image: "img/trazodona.png", active: "Antidepressivo" },
     { name: "Trazodona", image: "img/trazodona.png", active: "Antidepressivo" },
     { name: "Ranitidina", image: "img/ranitidina.png", active: "Antiácido" },
-    { name: "Ranitidina", image: "img/ranitidina.png", active: "Antiácido" }
+    { name: "Ranitidina", image: "img/ranitidina.png", active: "Antiácido" },
+    { name: "Bupropiona", image: "img/bupropiona.png", active: "Antidepressivo" },
+    { name: "Bupropiona", image: "img/bupropiona.png", active: "Antidepressivo" },
+    { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" },
+    { name: "Naproxeno", image: "img/naproxeno.png", active: "Anti-inflamatório" }
+
 ];
 
 let flippedCards = [];
