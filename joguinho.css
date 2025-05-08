@@ -60,7 +60,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* Responsivo */
   gap: 12px;
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -106,10 +106,10 @@ h1 {
   font-size: 0.85rem;
   color: #fff;
   background-color: #104f74;
-  padding: 6px 8px;
-  border-radius: 8px;
+  padding: 6px 6px;
+  border-radius: 7px;
   font-weight: bold;
-  margin-top: 8px;
+  margin-top: 6px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease;
 }
@@ -204,6 +204,23 @@ button.reiniciar:active {
 
 .instrucoes li {
   margin-bottom: 0.8rem;
+}
+
+footer {
+  background-color: #f9fbfd;
+  color: #244474;
+  text-align: center;
+  padding: 20px 10px;
+  border-top: 2px solid #cddbee;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 50px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+}
+
+footer p {
+  margin: 6px 0;
+  line-height: 1.5;
 }
 
 /* Responsividade */

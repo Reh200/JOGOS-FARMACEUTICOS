@@ -1,6 +1,6 @@
 const medications = [
-    { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
-    { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
+    /*{ name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" },
+    { name: "Amoxicilina", image: "img/amoxicilina.png", active: "Antibiótico" }, */
     { name: "Dipirona", image: "img/dipirona.png", active: "Analgésico" },
     { name: "Dipirona", image: "img/dipirona.png", active: "Analgésico" },
     { name: "Ibuprofeno", image: "img/ibuprofeno.png", active: "Anti-inflamatório" },
@@ -9,8 +9,8 @@ const medications = [
     { name: "Paracetamol", image: "img/paracetamol.png", active: "Antitérmico" },
     { name: "Captopril", image: "img/captopril.png", active: "Anti-hipertensivo" },
     { name: "Captopril", image: "img/captopril.png", active: "Anti-hipertensivo" },
-    { name: "Omeprazol", image: "img/omeprazol.png", active: "Inibidor de bomba de prótons" },
-    { name: "Omeprazol", image: "img/omeprazol.png", active: "Inibidor de bomba de prótons" },
+    { name: "Omeprazol", image: "img/omeprazol.png", active: "Antiulceroso" },
+    { name: "Omeprazol", image: "img/omeprazol.png", active: "Antiulceroso" },
     { name: "Losartana", image: "img/losartana.png", active: "Anti-hipertensivo" },
     { name: "Losartana", image: "img/losartana.png", active: "Anti-hipertensivo" },
     { name: "Loratadina", image: "img/loratadina.png", active: "Antialérgico" },
