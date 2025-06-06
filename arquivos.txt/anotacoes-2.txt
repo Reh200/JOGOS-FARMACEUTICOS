@@ -1,0 +1,45 @@
+areas-farm.html 
+areas.css 
+automedicacao.css 
+automedicacao.html 
+bulas.css 
+bulas.html 
+game-dosagem.css 
+game-dosagem.html 
+game-dosagem.js 
+game-formulas.css 
+game-formulas.html 
+game-formulas.js 
+game-memoria.css 
+game-memoria.html 
+game-memoria.js 
+game-quebraCabeca.css 
+game-quebraCabeca.html 
+game-quebraCabeca.js 
+glossario-farmaceutico.html 
+glossario.css 
+index.css 
+index.html 
+joguinhos.css 
+joguinhos.html 
+materiais.css 
+materiais.html 
+sobre.css 
+sobre.html
+
+https://guiadafarmacia.com.br/cortar-comprimido-ao-meio-equivale-a-tomar-meia-dose/
+
+https://www.uol.com.br/vivabem/faq/adesivo-anticoncepcional-como-funciona-vantagens-e-mais.htm
+
+https://convertio.co/      -      https://cloudconvert.com/webp-to-jpg      -      https://www.ilovepdf.com/pt      
+
+img/formas-med/spray.png ✅ 
+img/formas-med/adesivo.png ✅
+img/formas-med/capsula.png ✅
+img/formas-med/comprimidos.jpg ✅
+img/formas-med/creme.png ✅
+img/formas-med/dragea.png ✅
+img/formas-med/gel.png ✅
+img/formas-med/injecao.png ✅
+img/formas-med/pomada.png ✅
+img/formas-med/xarope.png ✅

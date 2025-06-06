@@ -1,0 +1,309 @@
+/* Estilos Gerais */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* impede rolagem horizontal */
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+#instructions {
+  text-align: center;
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #244474;
+}
+
+main {
+  flex: 1 0 auto; /* main ocupa o espaço disponível */
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: calc(100vh - 140px); /* ajuste para dar espaço ao footer */
+  max-width: 100vw; /* evitar ultrapassar a largura da viewport */
+  overflow-wrap: break-word; /* garantir quebra de palavras se necessário */
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 10px 20px;
+  max-width: 100vw;
+  overflow-wrap: break-word;
+}
+
+header h1 {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700; /* Mais grossa */
+  font-size: 3rem;
+  color: #2c3e50;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  margin: 15px 0;
+  letter-spacing: 0.03em;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+header p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Botões de Início e Reinício */
+#start-btn,
+#restart-btn {
+  padding: 12px 26px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: #3b79d6;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(76, 127, 175, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px auto;
+  display: inline-block;
+  max-width: 300px;
+  width: 100%; /* responsivo */
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+#start-btn:hover,
+#restart-btn:hover {
+  background-color: #2d66b6;
+  box-shadow: 0 6px 14px rgba(76, 127, 175, 0.4);
+}
+
+/* Container de efeitos */
+.effects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-width: 100vw;
+  overflow-wrap: break-word;
+}
+
+.effect {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 18px;
+  cursor: grab;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+  user-select: none;
+  white-space: normal;         /* permite quebra de linha */
+  word-wrap: break-word;       /* quebra palavras grandes */
+  overflow-wrap: break-word;   /* suporte adicional */
+  flex: 0 0 auto;
+  min-width: 110px;
+  max-width: 180px;
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.effect:active {
+  cursor: grabbing;
+}
+
+.effect.correct {
+  background-color: #d0f0d7 !important;
+  border: 1px solid #4caf50 !important;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
+}
+
+.effect.incorrect {
+  background-color: #f9d6d5 !important;
+  border: 1px solid #e57373 !important;
+  box-shadow: 0 0 8px rgba(229, 83, 77, 0.5);
+}
+
+/* Área de Grupos de Classificação */
+.groups {
+  display: flex;
+  flex-wrap: wrap;           /* Permite quebra em telas menores */
+  justify-content: center;   /* Centraliza os grupos */
+  gap: 30px;
+  margin-top: 30px;
+  max-width: 100vw;
+}
+
+.group {
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 350px;
+  min-height: 220px;
+  padding: 20px;
+  border: 2px dashed #bbb;
+  border-radius: 12px;
+  background: #e7f0f7;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+  transition: border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.group h2 {
+  font-size: 1.2rem;
+  color: #02040f;
+  margin-bottom: 15px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.group:hover {
+  border-color: #4caf50;
+}
+
+/* Área de Resultados */
+#result {
+  margin-top: 25px;
+  padding: 20px 25px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  text-align: left;
+  color: #2f2f2f;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+#result h3 {
+  margin-bottom: 15px;
+  color: #388e3c;
+  font-weight: 700;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #a5d6a7;
+  padding-bottom: 6px;
+}
+
+#result ul {
+  list-style-type: disc;
+  margin-left: 24px;
+}
+
+#result ul li {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Botão de Reset */
+#reset-btn {
+  display: inline-block;
+  margin: 30px auto 0 auto;
+  padding: 12px 26px;
+  font-size: 17px;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+  width: 100%;
+  user-select: none;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#reset-btn:hover {
+  background-color: #388e3c;
+  box-shadow: 0 6px 14px rgba(56, 142, 60, 0.6);
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: #f9fbfd;
+  color: #244474;
+  text-align: center;
+  padding: 12px 20px;
+  border-top: 2px solid #cddbee;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0; /* impede o footer de encolher */
+  box-sizing: border-box;
+}
+
+/* Texto do footer */
+footer p {
+  margin: 0;
+  line-height: 1.3;
+  font-size: 0.9rem;
+}
+
+footer strong {
+  color: #1b3a66;
+}
+
+footer small {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: #4a6572;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  footer {
+    padding: 14px 10px;
+  }
+  footer p {
+    margin: 4px 0;
+  }
+  footer small {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.8rem;
+    padding: 14px 10px;
+  }
+  footer p {
+    margin: 4px 0;
+  }
+  footer small {
+    font-size: 0.75rem;
+  }
+}

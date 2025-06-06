@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Administra ou Corrige?</title>
+  <link rel="stylesheet" href="css/game-dosagem.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Administra ou Corrige?</h1>
+    <p>Decida se a prescrição está correta ou se precisa ser corrigida.</p>
+  </header>
+
+  <main>
+    <section id="game-container">
+      <p id="contador" class="contador">Pergunta 1 de 10</p>
+      <h2 id="caso">Carregando caso...</h2>
+
+      <div class="buttons-container" id="botoes">
+        <button class="action-btn" onclick="responder(true)">✅ Administra</button>
+        <button class="action-btn" onclick="responder(false)">❌ Corrige</button>
+      </div>
+
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+    </section>
+  </main>
+
+<footer class="site-footer">
+  <p>
+    Desenvolvido por <strong>Aline Renata</strong> — Projeto Educacional 💊📘<br />
+    <small>Os medicamentos e sintomas apresentados têm fins exclusivamente educativos.</small>
+  </p>
+</footer>
+
+  <script src="js/game-dosagem.js"></script>
+</body>
+
+</html>
