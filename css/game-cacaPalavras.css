@@ -1,0 +1,184 @@
+/* Resetando margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo geral do body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  color: #333;
+}
+
+/* Container principal */
+.container {
+  text-align: center;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  width: 80%;
+  max-width: 900px;
+  min-height: 600px;
+  overflow-y: auto;
+}
+
+/* Cabeçalho do jogo */
+h1 {
+  font-size: 2.8rem;
+  color: #007bff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Grid do caça-palavras */
+#word-search {
+  display: grid;
+  grid-template-columns: repeat(12, 50px);
+  grid-gap: 5px;
+  margin: 20px auto;
+  max-width: 620px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e7e7;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+  background-color: #add8e6;
+  transform: scale(1.1);
+}
+
+.cell.selected {
+  background-color: #28a745;
+  color: white;
+}
+
+.cell.found {
+  background-color: #17a2b8;
+  color: white;
+  pointer-events: none;
+}
+
+.cell.found:hover {
+  background-color: #17a2b8;
+}
+
+/* Lista de palavras */
+#word-list {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+#word-list h3 {
+  font-size: 1.5rem;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+#words li {
+  font-size: 1.2rem;
+  background-color: #f1f1f1;
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#words li:hover {
+  background-color: #add8e6;
+  transform: scale(1.05);
+}
+
+#words li.found {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  pointer-events: none;
+}
+
+/* Estilo do botão de navegação */
+.menu-jogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 12px 24px;
+  margin-top: 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.menu-jogos:hover {
+  background-color: #0056b3;
+}
+
+.menu-jogos span {
+  margin-left: 10px;
+  font-size: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  #word-search {
+    grid-template-columns: repeat(8, 50px);
+  }
+
+  .cell {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+
+  #words li {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #word-search {
+    grid-template-columns: repeat(6, 45px);
+  }
+
+  .cell {
+    width: 45px;
+    height: 45px;
+    font-size: 0.9rem;
+  }
+
+  #words li {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
