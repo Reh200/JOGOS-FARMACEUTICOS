@@ -16,7 +16,7 @@ css/joguinhos.css
 
 //       <a href="game-quebraCabeca.html" class="menu-jogos" aria-label="Acessar o jogo Quebra Cabeça Medicamentoso">
         🧩 <span>Quebra Cabeça Medicamentoso</span> - Complete o quebra-cabeça e aprenda sobre medicamentos!
-      </a>
+      </a> 
 
 
 https://guiadafarmacia.com.br/cortar-comprimido-ao-meio-equivale-a-tomar-meia-dose/
