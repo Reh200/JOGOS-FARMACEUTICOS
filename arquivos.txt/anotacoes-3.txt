@@ -27,6 +27,9 @@
   * Opção C: **Esteroide inalatório**
 
   Após a escolha, o jogo mostra rapidamente **como o tratamento impacta os pulmões** e dá um **fato educativo** (ex: “O broncodilatador ajuda a relaxar os músculos das vias aéreas, facilitando a respiração.”)
+game-corpoHumano.html 
+js/game-corpoHumano.js
+css/game-corpoHumano.css
 
 ---
 
@@ -63,3 +66,6 @@
 
   Feedback: “**Vitamina C e antiviral** são boas opções para fortalecer o sistema imunológico e combater o vírus. Ideal para o início do resfriado.”
 
+game-inovacao.html
+css/game-inovacao.css
+js/game-inovacao.js

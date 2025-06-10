@@ -1,31 +1,23 @@
-areas-farm.html 
-areas.css 
-automedicacao.css 
-automedicacao.html 
-bulas.css 
-bulas.html 
-game-dosagem.css 
+game-corpoHumano.html 
+js/game-corpoHumano.js
+css/game-corpoHumano.css
+css/game-dosagem.css 
 game-dosagem.html 
-game-dosagem.js 
-game-formulas.css 
+js/game-dosagem.js 
+css/game-formulas.css 
 game-formulas.html 
-game-formulas.js 
-game-memoria.css 
+js/game-formulas.js 
+css/game-memoria.css 
 game-memoria.html 
-game-memoria.js 
-game-quebraCabeca.css 
-game-quebraCabeca.html 
-game-quebraCabeca.js 
-glossario-farmaceutico.html 
-glossario.css 
-index.css 
+js/game-memoria.js 
 index.html 
-joguinhos.css 
-joguinhos.html 
-materiais.css 
-materiais.html 
-sobre.css 
-sobre.html
+css/joguinhos.css 
+
+
+//       <a href="game-quebraCabeca.html" class="menu-jogos" aria-label="Acessar o jogo Quebra Cabeça Medicamentoso">
+        🧩 <span>Quebra Cabeça Medicamentoso</span> - Complete o quebra-cabeça e aprenda sobre medicamentos!
+      </a>
+
 
 https://guiadafarmacia.com.br/cortar-comprimido-ao-meio-equivale-a-tomar-meia-dose/
 
