@@ -69,3 +69,26 @@ css/game-corpoHumano.css
 game-inovacao.html
 css/game-inovacao.css
 js/game-inovacao.js
+
+🧪 Laboratório Virtual – Mistura de Medicamentos
+Objetivo:
+O jogador deve arrastar ingredientes (princípio ativo, diluente, conservante) e soltá-los no béquer. Se a mistura estiver correta, o medicamento é “criado”.
+
+💡 Mecânica:
+Drag & drop com JavaScript.
+
+Verificação da combinação correta.
+
+Feedback visual.
+
+
+📦 FarmaLogística – Organize a Distribuição
+Objetivo:
+Receber caixas de medicamentos e colocá-las nos destinos corretos (farmácia, hospital, etc), considerando a categoria e validade.
+
+💡 Mecânica:
+"Arraste para o destino correto".
+
+Pode ter “tempo de validade” que expira.
+
+Versões futuras: nível fácil/difícil, pontuação.
