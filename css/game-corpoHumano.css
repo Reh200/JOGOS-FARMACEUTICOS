@@ -1,22 +1,154 @@
+/* BODY E LAYOUT */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  padding: 20px;
-  background-color: #f0f4f7;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 1em;
+/* TÍTULO */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: #0d3b66;
+}
+
+/* SELEÇÃO DE SISTEMA */
+#system-selection button {
+  background: #147efb;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  margin: 10px 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
   cursor: pointer;
+  box-shadow: 0 6px 10px rgba(20,126,251,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  min-width: 140px;
 }
 
-.hidden {
-  display: none;
+#system-selection button:hover {
+  background: #0f69d1;
+  transform: translateY(-3px);
 }
 
+/* ÁREA DE DESAFIO */
+#challenge-area {
+  max-width: 700px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px 30px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  text-align: left;
+  font-size: 1.2rem;
+  color: #1c1c1c;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* TEXTO DO DESAFIO */
+#challenge-text {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* CONTAINER DAS OPÇÕES - usa flexbox para organizar os botões */
+#options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* BOTÕES DAS OPÇÕES - estilizados, fáceis de clicar */
+#options button {
+  background: #2a9df4;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 5px 8px rgba(42,157,244,0.5);
+  transition: background-color 0.25s ease, transform 0.15s ease;
+  min-width: 150px;
+  user-select: none;
+}
+
+#options button:hover {
+  background: #1a7bdc;
+  transform: translateY(-2px);
+}
+
+#options button:active {
+  transform: translateY(1px);
+}
+
+/* FEEDBACK */
 #feedback {
   margin-top: 20px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #007BFF;
+  min-height: 30px; /* evita pular layout quando aparece texto */
+  text-align: center;
+}
+
+/* ESCONDER ELEMENTOS */
+.hidden {
+  display: none !important;
+}
+
+/* BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO */
+.botao-canto {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  background: transparent;
+  border: 2px solid transparent;
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.6;
+  z-index: 1000;
+  border-radius: 6px;
+  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  color: #144552;
+  user-select: none;
+}
+
+.botao-canto:hover,
+.botao-canto:focus-visible {
+  opacity: 1;
+  color: #0d3b66;
+  border-color: #0d3b66;
+  outline: none;
+}
+
+#start-area button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 28px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 7px 15px rgba(40, 167, 69, 0.5);
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+#start-area button:hover {
+  background-color: #218838;
 }
