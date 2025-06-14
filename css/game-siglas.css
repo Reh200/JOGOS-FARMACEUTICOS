@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fffde7;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #f9a825;
+    margin-bottom: 20px;
+  }
+  
+  #pergunta {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+  }
+  
+  #opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+  }
+  
+  #opcoes button {
+    padding: 12px 22px;
+    font-size: 1.1em;
+    border: 2px solid #f9a825;
+    background-color: white;
+    color: #f9a825;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  #opcoes button:hover {
+    background-color: #f9a825;
+    color: white;
+  }
+  
+  #resultado {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  

@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f0;
+    text-align: center;
+    padding: 30px;
+  }
+  
+  h1 {
+    color: #c62828;
+  }
+  
+  #pergunta {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+  }
+  
+  #opcoes {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  #opcoes button {
+    padding: 12px 22px;
+    font-size: 1em;
+    border: 2px solid #c62828;
+    background-color: white;
+    color: #c62828;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  #opcoes button:hover {
+    background-color: #c62828;
+    color: white;
+  }
+  
+  #resultado {
+    font-weight: bold;
+    font-size: 1.3em;
+  }
+  
