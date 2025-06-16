@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - FarmaGames</title>
+
+    <!-- Link para FontAwesome (para o ícone de lua) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Importando a fonte Lobster -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&display=swap">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/sobre.css">
+</head>
+<body>
+
+    <!-- Botão de voltar para a página inicial -->
+    <a href="index.html" class="botao-canto">←</a>
+
+    <!-- Botão de alternância de tema -->
+    <button id="theme-toggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <header>
+        <h1>Sobre o FarmaGames</h1>
+        <p>Jogos educativos para aprender farmacologia de maneira divertida e interativa.</p>
+    </header>
+
+    <section class="glossary">
+        <div class="term">
+            <h2>O que é o FarmaGames?</h2>
+            <p>
+                O <strong>FarmaGames</strong> é uma plataforma com jogos educativos que visam ensinar e reforçar conceitos de farmacologia de forma divertida. Aqui, você pode aprender sobre medicamentos, cuidados com a saúde, dosagens e muito mais, enquanto se diverte jogando.
+            </p>
+        </div>
+
+        <div class="term">
+            <h2>Conheça nossos jogos</h2>
+            <p>Temos uma série de jogos interativos que ajudam a fixar conhecimentos sobre farmacologia. Confira os jogos que você pode jogar:</p>
+            <ul>
+                <li><a href="game-classificacao.html" class="menu-jogos">🤕🩹 Classifique os Efeitos</a> - Teste seu conhecimento sobre os efeitos dos medicamentos e como eles afetam o corpo.</li>
+                <li><a href="game-corpoHumano.html" class="menu-jogos">🧬 Viagem pelo Corpo Humano</a> - Uma jornada interativa pelo corpo humano para entender como os medicamentos atuam no organismo.</li>
+                <li><a href="game-dosagem.html" class="menu-jogos">⚖️🧴 Dosagem Correta</a> - Aprenda a calcular e administrar a dosagem correta de medicamentos de forma segura.</li>
+                <li><a href="game-dosagem2.html" class="menu-jogos">🧑‍⚕️ Dosagem de Medicamentos</a> - Desafie-se a aprender sobre as dosagens recomendadas para diferentes tipos de medicamentos.</li>
+                <li><a href="game-formulas.html" class="menu-jogos">🧪 Desafio da Fórmula</a> - Teste seus conhecimentos sobre a composição dos medicamentos e suas fórmulas químicas.</li>
+                <li><a href="game-genericos.html" class="menu-jogos">💊 Comercial vs Genérico</a> - Entenda as diferenças entre medicamentos comerciais e genéricos de forma divertida e educativa.</li>
+                <li><a href="game-inovacao.html" class="menu-jogos">🧬 Desafio da Inovação</a> - Explore inovações na área farmacêutica e descubra novas soluções no tratamento de doenças.</li>
+                <li><a href="game-interacoes.html" class="menu-jogos">⚠️ Interações Perigosas</a> - Aprenda sobre interações entre medicamentos e como evitar combinações perigosas.</li>
+                <li><a href="game-memoria.html" class="menu-jogos">🧠 FarmaMemory</a> - Um jogo de memória para reforçar o conhecimento sobre os medicamentos e suas propriedades.</li>
+                <li><a href="game-mitos.html" class="menu-jogos">🩺 Farmacêutico vs Mitos</a> - Desmistifique informações erradas sobre medicamentos e tratamentos populares.</li>
+                <li><a href="game-siglas.html" class="menu-jogos">🧠 Siglas & Abreviações</a> - Aprenda as siglas e abreviações mais usadas na farmacologia e no mundo da saúde.</li>
+                <li><a href="game-tarja.html" class="menu-jogos">🟥 Tarja Certa</a> - Conheça as tarjas dos medicamentos e entenda sua importância na segurança do uso de remédios.</li>
+            </ul>
+        </div>
+
+        <div class="term">
+            <h2>Por que aprender com o FarmaGames?</h2>
+            <p>
+                O <strong>FarmaGames</strong> oferece uma maneira leve e divertida de aprender conceitos importantes sobre farmacologia. Através de jogos interativos, você poderá praticar e testar seu conhecimento enquanto se diverte. Ideal para estudantes, profissionais da saúde e para qualquer pessoa que queira entender melhor o mundo dos medicamentos.
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 FarmaGames. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const themeToggleButton = document.getElementById("theme-toggle");
+        themeToggleButton.addEventListener("click", () => {
+            document.body.classList.toggle("dark-theme");
+        });
+    </script>
+
+</body>
+</html>

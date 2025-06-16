@@ -9,6 +9,27 @@ body {
     color: #c62828;
   }
   
+  /* Botão fixo no canto superior esquerdo */
+.botao-canto {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0.5;
+  z-index: 1000;
+  transition: opacity 0.2s, color 0.2s;
+}
+
+.botao-canto:hover {
+  opacity: 1;
+  color: #007BFF; /* azul padrão no hover */
+}
+
   #pergunta {
     font-size: 1.4em;
     margin-bottom: 20px;
