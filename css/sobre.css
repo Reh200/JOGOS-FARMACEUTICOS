@@ -9,27 +9,31 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Botão de voltar */
+/* BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO */
 .botao-canto {
     position: fixed;
-    top: 15px;
-    left: 15px;
+    top: 14px;
+    left: 14px;
     background: transparent;
-    border: none;
+    border: 2px solid transparent;
     padding: 6px 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 16px;
     cursor: pointer;
     text-decoration: none;
-    color: #333;
     opacity: 0.6;
     z-index: 1000;
-    transition: opacity 0.3s ease, color 0.3s ease;
+    border-radius: 6px;
+    transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    color: #144552;
+    user-select: none;
 }
 
-.botao-canto:hover {
+.botao-canto:hover,
+.botao-canto:focus-visible {
     opacity: 1;
-    color: #007bff;
+    color: #0d3b66;
+    border-color: #0d3b66;
+    outline: none;
 }
 
 /* Botão de tema */
@@ -37,20 +41,27 @@ body {
     position: fixed;
     top: 15px;
     right: 15px;
-    background-color: #ffffffcc;
+    background-color: transparent;
     border: none;
-    padding: 10px;
+    padding: 15px;
     border-radius: 50%;
     cursor: pointer;
-    font-size: 1.2rem;
-    color: #333;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1.5rem;
+    color: transparent;
+    box-shadow: none;
+    opacity: 0.1;
+    transition: opacity 0.3s, transform 0.2s;
+    pointer-events: auto;
 }
 
 #theme-toggle:hover {
-    background-color: #e1e1e1;
     transform: scale(1.1);
+    opacity: 1;
+}
+
+body.dark-theme {
+    background-color: #121212;
+    color: white;
 }
 
 /* Cabeçalho */
@@ -137,39 +148,6 @@ footer {
     font-size: 0.95rem;
     box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
     margin-top: auto;
-}
-
-/* Tema Escuro */
-body.dark-theme {
-    background-color: #121212;
-    color: #e0e0e0;
-}
-
-body.dark-theme header,
-body.dark-theme footer {
-    background-color: #1f1f1f;
-}
-
-body.dark-theme .term {
-    background-color: #2a2a2a;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.03);
-}
-
-body.dark-theme .term h2 {
-    color: #66b3ff;
-}
-
-body.dark-theme .menu-jogos {
-    color: #90caff;
-}
-
-body.dark-theme .menu-jogos:hover {
-    color: #c5e1ff;
-}
-
-body.dark-theme #theme-toggle {
-    background-color: #333;
-    color: #fff;
 }
 
 /* Responsivo */

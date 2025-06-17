@@ -64,9 +64,32 @@ const perguntas = [
     } else {
       setTimeout(() => {
         resultado.innerText = `🎉 Fim do jogo! Pontuação: ${pontos}/${perguntas.length}`;
+        mostrarBotaoReiniciar(); // Exibe o botão "Reiniciar"
       }, 1500);
     }
   }
   
-  mostrarPergunta();
+  function mostrarBotaoReiniciar() {
+    // Exibe o botão "Reiniciar" ao final do jogo
+    document.getElementById("btnReiniciar").style.display = "inline-block";
+  }
+  
+  function iniciarJogo() {
+    document.getElementById("instrucoes").style.display = "none"; // Esconde as instruções
+    document.getElementById("btnIniciar").style.display = "none"; // Esconde o botão Iniciar
+    mostrarPergunta(); // Começa o jogo
+  }
+  
+  function reiniciarJogo() {
+    atual = 0;
+    pontos = 0;
+    document.getElementById("resultado").innerText = "";
+    document.getElementById("instrucoes").style.display = "block"; // Volta as instruções
+    document.getElementById("btnIniciar").style.display = "block"; // Exibe o botão Iniciar novamente
+    document.getElementById("btnReiniciar").style.display = "none"; // Esconde o botão Reiniciar
+    mostrarPergunta(); // Recomeça o jogo
+  }
+  
+  document.getElementById("btnIniciar").addEventListener("click", iniciarJogo);
+  document.getElementById("btnReiniciar").addEventListener("click", reiniciarJogo);
   
