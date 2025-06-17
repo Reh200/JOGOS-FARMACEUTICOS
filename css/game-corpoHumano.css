@@ -136,7 +136,7 @@ h1 {
 }
 
 #start-area button {
-  background-color: #28a745;
+  background-color: #5676a0;
   color: white;
   border: none;
   border-radius: 8px;
@@ -144,11 +144,11 @@ h1 {
   font-size: 1.2rem;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 7px 15px rgba(40, 167, 69, 0.5);
+  box-shadow: 0 7px 15px rgba(40, 110, 167, 0.5);
   transition: background-color 0.3s ease;
   margin-bottom: 20px;
 }
 
 #start-area button:hover {
-  background-color: #218838;
+  background-color: #0d3b66;
 }
