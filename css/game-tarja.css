@@ -1,16 +1,18 @@
+/* Definições Gerais do Corpo */
 body {
-    font-family: 'Arial Black', Arial, sans-serif;
-    background: #fafafa;
-    text-align: center;
-    padding: 30px;
-  }
-  
-  h1 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-  }
-  
-  /* Botão fixo no canto superior esquerdo */
+  font-family: 'Arial Black', Arial, sans-serif;
+  background-color: #fafafa;
+  text-align: center;
+  padding: 30px;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+/* Botão de Navegação no Canto Superior Esquerdo */
 .botao-canto {
   position: fixed;
   top: 10px;
@@ -21,47 +23,195 @@ body {
   font-size: 14px;
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.5;
+  opacity: 0.7;
   z-index: 1000;
   transition: opacity 0.2s, color 0.2s;
 }
 
 .botao-canto:hover {
   opacity: 1;
-  color: #007BFF;
-  /* azul padrão no hover */
+  color: #007BFF;  /* Azul padrão no hover */
 }
-  #pergunta {
-    font-size: 1.4em;
-    margin-bottom: 25px;
+
+/* Estilo do Título */
+h1 {
+  color: #2e7d32;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Estilo de Instruções */
+#instrucoes {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#instrucoes h2 {
+  font-size: 1.6em;
+  color: #2e7d32;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#instrucoes p {
+  color: #555;
+  line-height: 1.5;
+}
+
+#instrucoes ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+#instrucoes ul li {
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+/* Estilo da Pergunta */
+#pergunta {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilo das Opções de Resposta */
+#opcoes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#opcoes button {
+  padding: 14px 25px;
+  font-size: 1.1em;
+  border: 2px solid #2e7d32;
+  background-color: white;
+  color: #2e7d32;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#opcoes button:hover {
+  background-color: #2e7d32;
+  color: white;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#opcoes button:active {
+  transform: scale(0.98);
+}
+
+/* Estilo do Resultado */
+#resultado {
+  font-weight: bold;
+  font-size: 1.4em;
+  margin-top: 20px;
+  color: #333;
+  transition: opacity 0.3s ease;
+}
+
+/* Estilos dos Botões de Controle (Iniciar, Reiniciar, Finalizar) */
+#botoes-controle {
+  margin-top: 30px;
+}
+
+#iniciar {
+  padding: 14px 25px;
+  font-size: 1.1em;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#iniciar:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+#iniciar:active {
+  transform: translateY(1px);
+}
+
+#reiniciar, #finalizar {
+  padding: 14px 25px;
+  font-size: 1.1em;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: none; /* Inicialmente escondido */
+}
+
+#reiniciar:hover, #finalizar:hover {
+  background-color: #45a049;
+  transform: translateY(-3px);
+}
+
+#reiniciar:active, #finalizar:active {
+  transform: translateY(1px);
+}
+
+#reiniciar:focus, #finalizar:focus {
+  outline: none;
+}
+
+/* Adicionando Estilo Responsivo para Telas Menores */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
   }
-  
+
   #opcoes {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   #opcoes button {
-    padding: 12px 22px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  #instrucoes {
     font-size: 1em;
-    border: 2px solid #2e7d32;
-    background-color: white;
-    color: #2e7d32;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: all 0.3s ease;
   }
-  
-  #opcoes button:hover {
-    background-color: #2e7d32;
-    color: white;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
   }
-  
-  #resultado {
-    font-weight: bold;
-    font-size: 1.3em;
+
+  #opcoes button {
+    padding: 12px 20px;
+    font-size: 1em;
   }
-  
+
+  #instrucoes {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+}

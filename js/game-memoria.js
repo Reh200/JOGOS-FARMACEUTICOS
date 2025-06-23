@@ -68,7 +68,7 @@ function startGame() {
     document.getElementById("restart-button").style.display = "inline-block";
     document.getElementById("instrucoes").style.display = "none"; // Esconde as instruções
     timer = setInterval(updateTime, 1000);
-    createBoard(); // Certifique-se de que essa função está definida corretamente
+    createBoard(); 
 }
 
 function updateTime() {
