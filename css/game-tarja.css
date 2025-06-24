@@ -1,217 +1,168 @@
-/* Definições Gerais do Corpo */
-body {
-  font-family: 'Arial Black', Arial, sans-serif;
-  background-color: #fafafa;
-  text-align: center;
-  padding: 30px;
+/* Importa uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Reset e configurações gerais */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #dceeff, #ffffff);
+  color: #111;
+  padding: 30px;
+  text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  color: #333;
+  justify-content: flex-start;
 }
 
-/* Botão de Navegação no Canto Superior Esquerdo */
+/* Botão de voltar */
 .botao-canto {
   position: fixed;
-  top: 10px;
-  left: 10px;
-  background: transparent;
-  border: none;
-  padding: 4px 8px;
-  font-size: 14px;
-  cursor: pointer;
+  top: 15px;
+  left: 15px;
+  font-size: 1.5rem;
+  background: #2b9fff;
+  color: white;
   text-decoration: none;
-  opacity: 0.7;
-  z-index: 1000;
-  transition: opacity 0.2s, color 0.2s;
+  padding: 8px 14px;
+  border-radius: 50%;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 .botao-canto:hover {
-  opacity: 1;
-  color: #007BFF;  /* Azul padrão no hover */
+  transform: scale(1.1);
+  background: #0075d6;
 }
 
-/* Estilo do Título */
+/* Título principal */
 h1 {
-  color: #2e7d32;
-  margin-bottom: 20px;
-  font-size: 2.5em;
-  font-weight: bold;
-  letter-spacing: 1px;
+  font-size: 2.5rem;
+  color: #0075d6;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 3px rgba(0, 117, 214, 0.2);
 }
 
-/* Estilo de Instruções */
+/* Contador */
+#contador {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 10px 0 25px;
+}
+
+/* Caixa de instruções */
 #instrucoes {
-  background-color: #f4f4f4;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  font-size: 1.1em;
-  margin-bottom: 30px;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 117, 214, 0.15);
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: left;
 }
 
 #instrucoes h2 {
-  font-size: 1.6em;
-  color: #2e7d32;
-  margin-bottom: 15px;
-  font-weight: 600;
+  font-size: 1.8rem;
+  color: #0075d6;
+  margin-bottom: 12px;
 }
 
 #instrucoes p {
-  color: #555;
-  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.6;
 }
 
 #instrucoes ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 10px 0;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
-#instrucoes ul li {
-  color: #333;
+#instrucoes li {
+  font-size: 1rem;
   margin-bottom: 8px;
-  font-weight: 500;
+  color: #111;
 }
 
-/* Estilo da Pergunta */
+/* Botões de controle */
+#botoes-controle {
+  margin: 20px 0;
+}
+
+#botoes-controle button {
+  background: #0075d6;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,117,214,0.2);
+}
+
+#botoes-controle button:hover {
+  background: #005bb5;
+  transform: translateY(-2px);
+}
+
+/* Pergunta */
 #pergunta {
-  font-size: 1.6em;
-  margin-bottom: 30px;
-  font-weight: 500;
-  color: #333;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111;
 }
 
-/* Estilo das Opções de Resposta */
+/* Opções */
 #opcoes {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 #opcoes button {
-  padding: 14px 25px;
-  font-size: 1.1em;
-  border: 2px solid #2e7d32;
-  background-color: white;
-  color: #2e7d32;
+  background: white;
+  color: #0075d6;
+  border: 2px solid #0075d6;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
   cursor: pointer;
-  border-radius: 12px;
-  font-weight: 600;
+  font-weight: bold;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 180px;
 }
 
 #opcoes button:hover {
-  background-color: #2e7d32;
+  background: #0075d6;
   color: white;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 117, 214, 0.3);
 }
 
-#opcoes button:active {
-  transform: scale(0.98);
-}
-
-/* Estilo do Resultado */
+/* Resultado */
 #resultado {
-  font-weight: bold;
-  font-size: 1.4em;
-  margin-top: 20px;
+  font-size: 1.3rem;
+  font-weight: 700;
   color: #333;
-  transition: opacity 0.3s ease;
+  margin-top: 15px;
 }
 
-/* Estilos dos Botões de Controle (Iniciar, Reiniciar, Finalizar) */
-#botoes-controle {
-  margin-top: 30px;
-}
-
-#iniciar {
-  padding: 14px 25px;
-  font-size: 1.1em;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-#iniciar:hover {
-  background-color: #45a049;
-  transform: translateY(-3px);
-}
-
-#iniciar:active {
-  transform: translateY(1px);
-}
-
-#reiniciar, #finalizar {
-  padding: 14px 25px;
-  font-size: 1.1em;
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  border-radius: 12px;
-  margin: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: none; /* Inicialmente escondido */
-}
-
-#reiniciar:hover, #finalizar:hover {
-  background-color: #45a049;
-  transform: translateY(-3px);
-}
-
-#reiniciar:active, #finalizar:active {
-  transform: translateY(1px);
-}
-
-#reiniciar:focus, #finalizar:focus {
-  outline: none;
-}
-
-/* Adicionando Estilo Responsivo para Telas Menores */
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  #opcoes {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #opcoes button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  #instrucoes {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 1.8em;
-  }
-
-  #opcoes button {
-    padding: 12px 20px;
-    font-size: 1em;
-  }
-
-  #instrucoes {
-    font-size: 0.9em;
-    padding: 15px;
-  }
+/* Rodapé */
+footer {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: #555;
+  padding-top: 30px;
 }

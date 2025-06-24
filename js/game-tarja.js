@@ -1,11 +1,8 @@
 const medicamentos = [
-  // Medicamentos Humanos
   { nome: "Paracetamol 500mg", resposta: "branca" },
   { nome: "Amoxicilina 500mg", resposta: "vermelha" },
   { nome: "Isotretinoína", resposta: "vermelha-retida" },
   { nome: "Diazepam", resposta: "preta" },
-
-  // Medicamentos Veterinários
   { nome: "Ivermectina", resposta: "branca" },
   { nome: "Enrofloxacino", resposta: "vermelha" },
   { nome: "Dipirona Veterinária", resposta: "vermelha-retida" },
@@ -17,19 +14,18 @@ const medicamentos = [
 ];
 
 let atual = 0;
-let respostasJogador = [];  // Array para armazenar as respostas do jogador
 let pontos = 0;
 
 // Função para mostrar a pergunta e as alternativas
 function mostrarTarja() {
-  const perguntaElemento = document.getElementById("pergunta");
-  const opcoesElemento = document.getElementById("opcoes");
+  // Atualiza o contador
+  document.getElementById("contador").innerText = `${atual + 1} de ${medicamentos.length}`;
 
-  // Exibe a pergunta
-  perguntaElemento.innerText = `Qual é a tarja de: ${medicamentos[atual].nome}?`;
+  document.getElementById("pergunta").innerText =
+    `Qual é a tarja de: ${medicamentos[atual].nome}?`;
 
-  // Limpa as opções anteriores
-  opcoesElemento.innerHTML = "";
+  const opcoes = document.getElementById("opcoes");
+  opcoes.innerHTML = "";  // Limpar as opções anteriores
 
   const alternativas = [
     { valor: "branca", texto: "⚪ Tarja Branca" },
@@ -38,12 +34,11 @@ function mostrarTarja() {
     { valor: "preta", texto: "⚫ Tarja Preta" }
   ];
 
-  // Cria os botões para as opções
   alternativas.forEach(op => {
     const btn = document.createElement("button");
     btn.innerText = op.texto;
-    btn.onclick = () => responder(op.valor);  // Armazena a escolha do jogador
-    opcoesElemento.appendChild(btn);
+    btn.onclick = () => responder(op.valor);
+    opcoes.appendChild(btn);
   });
 
   // Exibe o botão de "Finalizar" durante o jogo
@@ -52,21 +47,30 @@ function mostrarTarja() {
 
 // Função que processa a resposta do jogador
 function responder(escolha) {
-  // Armazena a resposta do jogador
-  respostasJogador.push(escolha);
+  const correta = medicamentos[atual].resposta;
+  const resultado = document.getElementById("resultado");
 
-  // Avança para a próxima pergunta
+  if (escolha === correta) {
+    resultado.innerText = "✅ Correto!";
+    pontos++;
+  } else {
+    resultado.innerText = `❌ Errado! Resposta certa: ${correta}`;
+  }
+
+  // Avançar para a próxima pergunta
   atual++;
 
   // Verifica se ainda há perguntas para mostrar
   if (atual < medicamentos.length) {
     setTimeout(() => {
+      resultado.innerText = "";  // Limpar a resposta anterior
       mostrarTarja();  // Mostrar a próxima pergunta
     }, 1500);
   } else {
     // Se acabou o jogo, exibe a pontuação final
     setTimeout(() => {
-      finalizarJogo();  // Chama a função para finalizar o jogo
+      resultado.innerText = `🎉 Pontuação final: ${pontos}/${medicamentos.length}`;
+      document.getElementById("reiniciar").style.display = 'block'; // Exibe o botão de Reiniciar
     }, 1500);
   }
 }
@@ -77,10 +81,7 @@ function iniciarJogo() {
   document.getElementById("iniciar").style.display = 'none';
   document.getElementById("instrucoes").style.display = 'none';
 
-  // Reseta variáveis e exibe a primeira pergunta
-  atual = 0;
-  pontos = 0;
-  respostasJogador = [];  // Limpa as respostas armazenadas
+  // Exibe a primeira pergunta
   mostrarTarja();
 }
 
@@ -89,7 +90,6 @@ function reiniciarJogo() {
   // Reseta variáveis
   atual = 0;
   pontos = 0;
-  respostasJogador = [];  // Limpa as respostas armazenadas
 
   // Esconde o botão Reiniciar e Finalizar
   document.getElementById("reiniciar").style.display = 'none';
@@ -98,22 +98,14 @@ function reiniciarJogo() {
   // Exibe o botão Iniciar novamente
   document.getElementById("iniciar").style.display = 'block';
 
-  // Exibe as instruções novamente
+  // Exibe as instruções
   document.getElementById("instrucoes").style.display = 'block';
 }
 
 // Função para finalizar o jogo
 function finalizarJogo() {
-  const resultado = document.getElementById("resultado");
-
-  // Verifica todas as respostas ao final do jogo
-  for (let i = 0; i < medicamentos.length; i++) {
-    if (respostasJogador[i] === medicamentos[i].resposta) {
-      pontos++;  // Incrementa a pontuação se a resposta for correta
-    }
-  }
-
   // Exibe a pontuação final quando o jogador clica em "Finalizar"
+  const resultado = document.getElementById("resultado");
   resultado.innerText = `🎉 Você finalizou o jogo! Pontuação: ${pontos}/${medicamentos.length}`;
 
   // Esconde as alternativas e pergunta
