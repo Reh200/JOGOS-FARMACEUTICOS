@@ -42,7 +42,7 @@ body.dark-theme .botao-voltar:hover {
 /* === BOTÃO SOBRE === */
 .sobre-btn {
   position: absolute;
-  top: 38px;
+  top: 15px; /* Valor ajustado para mover o botão para cima */
   left: 10px;
   font-size: 14px;
   background-color: transparent;
