@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 /* =============================
-   VARIÁVEIS DE COR (CSS VARIABLES)
+   VARIÁVEIS DE COR
    ============================= */
 :root {
   --cor-fundo-claro: #f9f9f9;
@@ -18,16 +17,28 @@
 }
 
 /* =============================
+   IMPORTAÇÃO DE FONTE
+   ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* =============================
    RESET & CORPO
    ============================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: var(--cor-fundo-claro);
   color: var(--cor-fundo-escuro);
   text-align: center;
   padding: 60px 20px;
-  margin: 0;
-  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* =============================
@@ -44,32 +55,145 @@ h1 {
 }
 
 /* =============================
-   BOTÃO FIXO NO CANTO SUPERIOR ESQUERDO
+   BOTÃO DE VOLTAR NO CANTO
    ============================= */
 .botao-canto {
   position: fixed;
   top: 14px;
   left: 14px;
-  background: transparent;
-  border: 2px solid transparent;
+  background: none;
+  border: none;
   padding: 6px 10px;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.6;
   color: #144552;
+  opacity: 0.6;
   border-radius: 6px;
   user-select: none;
   z-index: 1000;
-  transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease;
 }
 
 .botao-canto:hover,
 .botao-canto:focus-visible {
   opacity: 1;
   color: #0d3b66;
-  border-color: #0d3b66;
   outline: none;
+}
+
+/* =============================
+   CONTADOR DE PERGUNTAS
+   ============================= */
+#contador,
+#contagem-pergunta {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: var(--cor-texto-secundario);
+  margin: 20px auto 40px;
+  text-align: center;
+}
+
+/* =============================
+   INSTRUÇÕES
+   ============================= */
+#instrucoes {
+  background: linear-gradient(135deg, #ffffff, #f0f4f8);
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px var(--cor-sombra);
+  max-width: 850px;
+  margin: 0 auto 40px;
+  text-align: left;
+  border-left: 6px solid var(--cor-secundaria);
+  transition: all 0.3s ease-in-out;
+}
+
+#instrucoes h2 {
+  font-size: 2rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#instrucoes p {
+  font-size: 1.1rem;
+  color: var(--cor-texto-principal);
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+#instrucoes ul {
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+#instrucoes li {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--cor-texto-secundario);
+  position: relative;
+  padding-left: 20px;
+}
+
+#instrucoes li::before {
+  content: "📌";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1rem;
+  color: var(--cor-secundaria);
+}
+
+/* =============================
+   BOTÕES DE CONTROLE
+   ============================= */
+#botoes-controle,
+#inicio-reinicio {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+#botoes-controle button,
+#inicio-reinicio button {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: 600;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+  box-shadow: 0 4px 10px var(--cor-sombra);
+  transition: all 0.3s ease-in-out;
+  min-width: 130px;
+}
+
+#botoes-controle button:hover,
+#inicio-reinicio button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--cor-hover-sombra);
+  opacity: 0.9;
+}
+
+#btn-iniciar {
+  background: linear-gradient(45deg, var(--cor-secundaria), var(--cor-acento));
+}
+
+#btn-reiniciar {
+  background: linear-gradient(45deg, #d9534f, var(--cor-botao-ativo));
+  display: none;
+}
+
+#btn-finalizar {
+  background: linear-gradient(45deg, #6c757d, #adb5bd);
+  display: none;
 }
 
 /* =============================
@@ -83,7 +207,7 @@ h1 {
 }
 
 /* =============================
-   ÁREA DE OPÇÕES
+   OPÇÕES DE RESPOSTA
    ============================= */
 #opcoes {
   display: flex;
@@ -137,292 +261,118 @@ h1 {
 }
 
 /* =============================
-   CONTAGEM DE PERGUNTA
+   RODAPÉ
    ============================= */
-#contagem-pergunta {
-  display: none; /* Escondido no início */
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.2em;
-  font-weight: 700;
-  color: var(--cor-texto-secundario);
-  background-color: #f0f4f8;
-  padding: 15px 25px;
-  border-radius: 12px;
-  border-left: 5px solid var(--cor-secundaria);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  width: 100%;
-  max-width: 400px;
-  margin: 20px auto 40px auto; /* margem top 20 e bottom 40 */
-  text-align: center;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  user-select: none; /* Evita seleção acidental do texto */
-  cursor: default;   /* Indica que não é clicável */
-}
-
-#contagem-pergunta:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px var(--cor-hover-sombra);
-}
-
-/* =============================
-   CONTAINER DE BOTÕES (INICIAR, REINICIAR, FINALIZAR)
-   ============================= */
-#inicio-reinicio {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-#inicio-reinicio button {
-  padding: 12px 24px;
-  font-size: 1.1em;
-  font-weight: 600;
-  border-radius: 25px;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: white;
-  box-shadow: 0 4px 10px var(--cor-sombra);
-  transition: all 0.3s ease-in-out;
-  min-width: 130px;
-}
-
-#inicio-reinicio button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px var(--cor-hover-sombra);
-  opacity: 0.9;
-}
-
-#btn-iniciar {
-  background: linear-gradient(45deg, var(--cor-secundaria), var(--cor-acento));
-}
-
-#btn-reiniciar {
-  background: linear-gradient(45deg, #d9534f, var(--cor-botao-ativo));
-  display: none;
-}
-
-#btn-finalizar {
-  background: linear-gradient(45deg, #6c757d, #adb5bd);
-  display: none;
-}
-
-/* =============================
-   RESPONSIVIDADE
-   ============================= */
-@media (max-width: 768px) {
-  body {
-    padding: 40px 10px;
-  }
-
-  h1 {
-    font-size: 2.5em;
-  }
-
-  #opcoes {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #contagem-pergunta {
-    max-width: 90%;
-    padding: 12px 20px;
-  }
-
-  #inicio-reinicio {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2em;
-  }
-
-  #pergunta {
-    font-size: 1.6em;
-  }
-
-  #opcoes button {
-    font-size: 1em;
-    padding: 12px 25px;
-  }
-
-  #contagem-pergunta {
-    font-size: 1em;
-  }
-}
-=======
-/* Importa uma fonte moderna */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-/* Reset e configurações gerais */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(135deg, #dceeff, #ffffff);
-  color: #111;
-  padding: 30px;
-  text-align: center;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Botão de voltar */
-.botao-canto {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  font-size: 1.5rem;
-  background: #2b9fff;
-  color: white;
-  text-decoration: none;
-  padding: 8px 14px;
-  border-radius: 50%;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, background 0.3s ease;
-}
-
-.botao-canto:hover {
-  transform: scale(1.1);
-  background: #0075d6;
-}
-
-/* Título principal */
-h1 {
-  font-size: 2.5rem;
-  color: #0075d6;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  text-shadow: 0 1px 3px rgba(0, 117, 214, 0.2);
-}
-
-/* Contador */
-#contador {
-  font-size: 1.2rem;
-  color: #333;
-  margin: 10px 0 25px;
-}
-
-/* Caixa de instruções */
-#instrucoes {
-  background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 117, 214, 0.15);
-  max-width: 800px;
-  margin: 0 auto 30px;
-  text-align: left;
-}
-
-#instrucoes h2 {
-  font-size: 1.8rem;
-  color: #0075d6;
-  margin-bottom: 12px;
-}
-
-#instrucoes p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-
-#instrucoes ul {
-  margin-left: 20px;
-  margin-top: 10px;
-}
-
-#instrucoes li {
-  font-size: 1rem;
-  margin-bottom: 8px;
-  color: #111;
-}
-
-/* Botões de controle */
-#botoes-controle {
-  margin: 20px 0;
-}
-
-#botoes-controle button {
-  background: #0075d6;
-  color: white;
-  font-size: 1.1rem;
-  padding: 12px 24px;
-  margin: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
-  box-shadow: 0 4px 10px rgba(0,117,214,0.2);
-}
-
-#botoes-controle button:hover {
-  background: #005bb5;
-  transform: translateY(-2px);
-}
-
-/* Pergunta */
-#pergunta {
-  font-size: 1.6rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #111;
-}
-
-/* Opções */
-#opcoes {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-#opcoes button {
-  background: white;
-  color: #0075d6;
-  border: 2px solid #0075d6;
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  min-width: 180px;
-}
-
-#opcoes button:hover {
-  background: #0075d6;
-  color: white;
-  box-shadow: 0 5px 10px rgba(0, 117, 214, 0.3);
-}
-
-/* Resultado */
-#resultado {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #333;
-  margin-top: 15px;
-}
-
-/* Rodapé */
 footer {
   margin-top: auto;
   font-size: 0.9rem;
   color: #555;
   padding-top: 30px;
 }
->>>>>>> 89a047f1d26338511b167632f6aca1c05916395d
+
+/* =============================
+   RESPONSIVO
+   ============================= */
+@media (max-width: 768px) {
+  body {
+    padding: 30px 12px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+  }
+
+  #instrucoes {
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+
+  #instrucoes h2 {
+    font-size: 1.5rem;
+  }
+
+  #instrucoes p,
+  #instrucoes li {
+    font-size: 1rem;
+  }
+
+  #opcoes {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  #opcoes button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  #contagem-pergunta {
+    max-width: 95%;
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+
+  #botoes-controle,
+  #inicio-reinicio {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #botoes-controle button,
+  #inicio-reinicio button {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  #resultado {
+    font-size: 1.2em;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+
+  #pergunta {
+    font-size: 1.4em;
+    margin-bottom: 30px;
+  }
+
+  #opcoes button {
+    font-size: 0.95em;
+    padding: 10px 18px;
+  }
+
+  #contagem-pergunta {
+    font-size: 0.95em;
+    padding: 8px 12px;
+  }
+
+  #instrucoes {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+
+  #instrucoes h2 {
+    font-size: 1.3rem;
+  }
+
+  #instrucoes p,
+  #instrucoes li {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+    padding-top: 20px;
+  }
+}

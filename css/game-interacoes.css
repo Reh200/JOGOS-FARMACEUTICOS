@@ -150,17 +150,65 @@ button:disabled {
   color: var(--cor-hover);
 }
 
-/* === RESPONSIVO === */
+/* =============================
+   RESPONSIVO EXTRA PARA CELULARES
+   ============================= */
 @media (max-width: 600px) {
   #opcoes {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
+    padding: 0 10px;
   }
 
   #opcoes button {
     width: 100%;
-    max-width: 300px;
+    max-width: 320px;
+    font-size: 1rem;
+    padding: 12px 20px;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px var(--cor-sombra);
+  }
+
+  #botoes-controle {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  #botoes-controle button {
+    width: 100%;
+    max-width: 320px;
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  #instrucoes {
+    padding: 18px;
+    font-size: 0.95rem;
+    border-radius: 12px;
+  }
+
+  #instrucoes h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  #instrucoes p,
+  #instrucoes li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  #contagem-pergunta {
+    font-size: 1rem;
+    padding: 10px 15px;
+    max-width: 90%;
+  }
+
+  #resultado {
+    font-size: 1.1rem;
+    padding: 0 10px;
   }
 }
-
-

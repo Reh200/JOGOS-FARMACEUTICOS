@@ -1,26 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8" />
   <title>Tarja Certa</title>
   <link rel="stylesheet" href="css/game-tarja.css" />
 </head>
-
 <body>
 
   <!-- Botão de navegação -->
   <a href="index.html" class="botao-canto">←</a>
 
+  <!-- Título -->
   <h1>💊 Tarja Certa</h1>
 
-<<<<<<< HEAD
-  <!-- Contagem de Perguntas -->
-  <div id="contagem-pergunta"></div>
-  <!-- Pergunta -->
-=======
   <!-- Contador de Perguntas -->
-  <div id="contador"></div>
+  <div id="contagem-pergunta"></div>
 
   <!-- Instruções -->
   <div id="instrucoes">
@@ -31,10 +25,8 @@
     <ul>
       <li>Em cada rodada, será mostrado um medicamento.</li>
       <li>Você deve escolher a tarja correta associada a esse medicamento.</li>
-      <li>As tarjas possíveis são: ⚪ Tarja Branca, 🔴 Tarja Vermelha, 🔴📄 Tarja Vermelha (Retida), e ⚫ Tarja Preta.
-      </li>
-      <li>Cada acerto vai gerar uma resposta positiva, e cada erro será corrigido, permitindo que você tente novamente.
-      </li>
+      <li>As tarjas possíveis são: ⚪ Tarja Branca, 🔴 Tarja Vermelha, 🔴📄 Tarja Vermelha (Retida), e ⚫ Tarja Preta.</li>
+      <li>Cada acerto gera uma resposta positiva, e cada erro será corrigido, permitindo que você tente novamente.</li>
       <li>Após a última pergunta, você pode finalizar o jogo a qualquer momento.</li>
     </ul>
     <p>Está pronto para começar? Clique em "Iniciar" e boa sorte!</p>
@@ -42,13 +34,12 @@
 
   <!-- Botões de Controle -->
   <div id="botoes-controle">
-    <button id="iniciar" onclick="iniciarJogo()">Iniciar</button>
-    <button id="reiniciar" onclick="reiniciarJogo()" style="display:none;">Reiniciar</button>
-    <button id="finalizar" onclick="finalizarJogo()" style="display:none;">Finalizar</button>
+    <button id="btn-iniciar" onclick="iniciarJogo()">Iniciar</button>
+    <button id="btn-reiniciar" onclick="reiniciarJogo()" style="display: none;">Reiniciar</button>
+    <button id="btn-finalizar" onclick="finalizarJogo()" style="display: none;">Finalizar</button>
   </div>
 
-  <!-- Pergunta e Opções -->
->>>>>>> 89a047f1d26338511b167632f6aca1c05916395d
+  <!-- Pergunta -->
   <div id="pergunta"></div>
 
   <!-- Opções de resposta -->
@@ -57,22 +48,12 @@
   <!-- Resultado -->
   <div id="resultado"></div>
 
-<<<<<<< HEAD
-  <!-- Botão de Iniciar/Reiniciar/Finalizar -->
-  <div id="inicio-reinicio">
-    <button id="btn-iniciar" onclick="iniciarJogo()">Iniciar</button>
-    <button id="btn-reiniciar" onclick="reiniciarJogo()">Reiniciar</button>
-    <button id="btn-finalizar" onclick="finalizarJogo()">Finalizar</button>
-  </div>
-=======
   <!-- Rodapé -->
   <footer>
     <p>© 2025 Tarja Certa. Todos os direitos reservados.</p>
   </footer>
 
   <!-- Script -->
->>>>>>> 89a047f1d26338511b167632f6aca1c05916395d
   <script src="js/game-tarja.js"></script>
 </body>
-
 </html>
