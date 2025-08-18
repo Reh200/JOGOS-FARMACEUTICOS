@@ -151,21 +151,24 @@ button:disabled {
 }
 
 /* =============================
-   RESPONSIVO EXTRA PARA CELULARES
-   ============================= */
+    RESPONSIVO EXTRA PARA CELULARES
+    ============================= */
 @media (max-width: 600px) {
   #opcoes {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    /* Aumentado o espaçamento entre os botões */
+    gap: 16px;
     padding: 0 10px;
   }
 
   #opcoes button {
     width: 100%;
     max-width: 320px;
-    font-size: 1rem;
-    padding: 12px 20px;
+    /* Fonte um pouco maior para melhor legibilidade */
+    font-size: 1.1rem;
+    /* Padding maior para facilitar o toque */
+    padding: 14px 20px;
     border-radius: 20px;
     box-shadow: 0 3px 8px var(--cor-sombra);
   }
@@ -173,42 +176,51 @@ button:disabled {
   #botoes-controle {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    /* Aumentado o espaçamento */
+    gap: 16px;
     padding: 0 10px;
   }
 
   #botoes-controle button {
     width: 100%;
     max-width: 320px;
-    font-size: 1rem;
-    padding: 12px 20px;
+    /* Fonte maior */
+    font-size: 1.1rem;
+    /* Padding maior */
+    padding: 14px 20px;
   }
 
   #instrucoes {
-    padding: 18px;
-    font-size: 0.95rem;
+    padding: 20px;
+    /* Fonte um pouco maior */
+    font-size: 1rem;
     border-radius: 12px;
   }
 
   #instrucoes h2 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    /* Título mais destacado */
+    font-size: 1.6rem;
+    /* Espaço abaixo do título para separar do texto */
+    margin-bottom: 12px;
   }
 
   #instrucoes p,
   #instrucoes li {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    /* Fonte mais legível para o corpo do texto */
+    font-size: 1rem;
+    line-height: 1.6;
   }
 
   #contagem-pergunta {
-    font-size: 1rem;
-    padding: 10px 15px;
+    /* Fonte maior e mais destacada */
+    font-size: 1.1rem;
+    padding: 12px 18px;
     max-width: 90%;
   }
 
   #resultado {
-    font-size: 1.1rem;
+    /* Resultado mais visível */
+    font-size: 1.2rem;
     padding: 0 10px;
   }
 }
