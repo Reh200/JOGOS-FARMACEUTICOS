@@ -69,7 +69,7 @@ function iniciarJogo() {
   document.getElementById("contagem-pergunta").style.display = "block";
   document.getElementById("pergunta").style.display = "block";
   document.getElementById("resultado").innerHTML = "";
-  document.getElementById("instrucoes").style.display = "none"; // 👈 Esconde instruções
+  document.getElementById("instrucoes").style.display = "none";
   mostrarTarja();
 }
 
@@ -86,7 +86,7 @@ function reiniciarJogo() {
   document.getElementById("pergunta").style.display = "block";
   document.getElementById("contagem-pergunta").style.display = "none";
   document.getElementById("opcoes").innerHTML = "";
-  document.getElementById("instrucoes").style.display = "block"; // 👈 Mostra instruções
+  document.getElementById("instrucoes").style.display = "block";
 
   mostrarTarja();
 }
@@ -124,15 +124,11 @@ function responder(escolha, btn) {
     respostaCorreta: correta
   });
 
+  // Desabilita os botões para evitar múltiplos cliques
   document.querySelectorAll("#opcoes button").forEach(button => button.disabled = true);
 
-  if (escolha === correta) {
-    btn.style.backgroundColor = "#28a745";
-    btn.style.color = "#fff";
-  } else {
-    btn.style.backgroundColor = "#dc3545";
-    btn.style.color = "#fff";
-  }
+  // O código que mudava a cor dos botões foi removido daqui.
+  // Eles não ficarão mais verdes ou vermelhos.
 
   if (escolha === correta) pontos++;
   atual++;
@@ -163,13 +159,13 @@ function mostrarResultadoFinal() {
     const textoUsuario = alternativas.find(a => a.valor === item.escolhaUsuario).texto;
 
     htmlResultado += `
-      <div class="resumo-pergunta">
-        <p><strong>${index + 1}. ${item.pergunta}</strong></p>
-        <p>Sua resposta: ${textoUsuario}</p>
-        <p>Resposta correta: ${textoCorreta} (${status})</p>
-        <hr>
-      </div>
-    `;
+            <div class="resumo-pergunta">
+                <p><strong>${index + 1}. ${item.pergunta}</strong></p>
+                <p>Sua resposta: ${textoUsuario}</p>
+                <p>Resposta correta: ${textoCorreta} (${status})</p>
+                <hr>
+            </div>
+        `;
   });
 
   resultado.innerHTML = htmlResultado;
