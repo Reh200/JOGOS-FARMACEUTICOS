@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Viagem pelo Corpo Humano</title>
-  <link rel="stylesheet" href="css/game-corpoHumano.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Viagem pelo Corpo Humano</title>
+    <link rel="stylesheet" href="css/game-corpoHumano.css" />
 </head>
 <body>
 
-  <a href="index.html" class="botao-canto">←</a>
+    <a href="index.html" class="botao-canto">←</a>
 
-  <h1>🧬 Viagem pelo Corpo Humano</h1>
-  
-  <div id="instructions">
-    <h2>Escolha um sistema para explorar:</h2>
-  </div>
+    <h1>🧬 Viagem pelo Corpo Humano</h1>
+    
+    <div id="instructions">
+        <h2>Escolha um sistema para explorar:</h2>
+    </div>
 
-  <div id="start-area">
-    <button id="start-btn" onclick="startGame()">Iniciar</button>
-    <button id="restart-btn" onclick="restartGame()" class="hidden">Reiniciar</button>
-  </div>
+    <div id="start-area">
+        <button id="start-btn" onclick="startGame()">Iniciar</button>
+        <button id="restart-btn" onclick="restartGame()" class="hidden">Reiniciar</button>
+    </div>
 
-  <div id="system-selection" class="hidden">
-    <button onclick="startChallenge('Sistema Nervoso')">🧠 Sistema Nervoso</button>
-    <button onclick="startChallenge('Sistema Respiratório')">🌬️ Sistema Respiratório</button>
-    <button onclick="startChallenge('Sistema Circulatório')">🩺 Sistema Circulatório</button>
-    <button onclick="startChallenge('Sistema Digestivo')">🍽️ Sistema Digestivo</button>
-    <button onclick="startChallenge('Sistema Urinário')">🚽 Sistema Urinário</button>
-    <button onclick="startChallenge('Sistema Endócrino')">🧬 Sistema Endócrino</button>
-    <button onclick="startChallenge('Sistema Reprodutor')">👶 Sistema Reprodutor</button>
-    <button onclick="startChallenge('Sistema Muscular')">💪 Sistema Muscular</button>
-    <button onclick="startChallenge('Sistema Esquelético')">🦴 Sistema Esquelético</button>
-    <button onclick="startChallenge('Sistema Imunológico')">🛡️ Sistema Imunológico</button>
-  </div>
+    <div id="system-selection" class="hidden">
+        <button onclick="startChallenge('Sistema Nervoso')">🧠 Sistema Nervoso</button>
+        <button onclick="startChallenge('Sistema Respiratório')">🌬️ Sistema Respiratório</button>
+        <button onclick="startChallenge('Sistema Circulatório')">🩺 Sistema Circulatório</button>
+        <button onclick="startChallenge('Sistema Digestivo')">🍽️ Sistema Digestivo</button>
+        <button onclick="startChallenge('Sistema Urinário')">🚽 Sistema Urinário</button>
+        <button onclick="startChallenge('Sistema Endócrino')">🧬 Sistema Endócrino</button>
+        <button onclick="startChallenge('Sistema Reprodutor')">👶 Sistema Reprodutor</button>
+        <button onclick="startChallenge('Sistema Muscular')">💪 Sistema Muscular</button>
+        <button onclick="startChallenge('Sistema Esquelético')">🦴 Sistema Esquelético</button>
+        <button onclick="startChallenge('Sistema Imunológico')">🛡️ Sistema Imunológico</button>
+    </div>
 
-  <div id="challenge-area" class="hidden">
-    <p id="challenge-text"></p>
-    <div id="options"></div>
-    <div id="feedback"></div>
-  </div>
+    <div id="challenge-area" class="hidden">
+        <p id="challenge-text"></p>
+        <div id="options"></div>
+        <div id="feedback"></div>
+    </div>
 
-  <script src="js/game-corpoHumano.js"></script>
+    <script src="js/game-corpoHumano.js"></script>
 </body>
 </html>

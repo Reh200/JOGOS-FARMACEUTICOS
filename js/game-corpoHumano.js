@@ -1,575 +1,390 @@
 const challenges = {
   "Sistema Nervoso": [
     {
-      text: "Qual neurotransmissor está associado ao controle do humor e é alvo de antidepressivos como os ISRS?",
+      text: "Qual é a função principal do sistema nervoso central?",
       options: [
-        { text: "Dopamina", correct: false },
-        { text: "Serotonina", correct: true },
-        { text: "Acetilcolina", correct: false },
-      ],
-      feedback: "A serotonina influencia o humor, ansiedade e felicidade, sendo alvo dos inibidores seletivos da recaptação da serotonina (ISRS)."
+        { text: "Controlar movimentos involuntários", correct: false },
+        { text: "Processar informações e coordenar respostas", correct: true },
+        { text: "Bombear sangue pelo corpo", correct: false },
+        { text: "Digestionar alimentos", correct: false }
+      ]
     },
     {
-      text: "Qual animal foi fundamental para a descoberta da morfina e outros opioides?",
+      text: "Quais são as duas principais partes do sistema nervoso central?",
       options: [
-        { text: "Pomba", correct: false },
-        { text: "Papoula", correct: false },
-        { text: "Coelho", correct: false },
-        { text: "Rato", correct: true },
-      ],
-      feedback: "Ratos foram usados em pesquisas para isolar a morfina da papoula e estudar seus efeitos analgésicos."
+        { text: "Coração e pulmões", correct: false },
+        { text: "Estômago e intestinos", correct: false },
+        { text: "Cérebro e medula espinhal", correct: true },
+        { text: "Fígado e rins", correct: false }
+      ]
     },
     {
-      text: "Qual doença neurodegenerativa é tratada com levodopa para aumentar dopamina no cérebro?",
+      text: "Qual é a função dos neurônios?",
       options: [
-        { text: "Esclerose múltipla", correct: false },
-        { text: "Mal de Parkinson", correct: true },
-        { text: "Alzheimer", correct: false },
-      ],
-      feedback: "A doença de Parkinson é causada pela perda de neurônios dopaminérgicos, tratada com levodopa para repor dopamina."
+        { text: "Transportar oxigênio", correct: false },
+        { text: "Produzir hormônios", correct: false },
+        { text: "Transmitir impulsos elétricos", correct: true },
+        { text: "Filtrar o sangue", correct: false }
+      ]
     },
     {
-      text: "O que significa que um medicamento cruza a barreira hematoencefálica?",
+      text: "O que é uma sinapse?",
       options: [
-        { text: "Ele atinge o cérebro", correct: true },
-        { text: "Ele atua no fígado", correct: false },
-        { text: "Ele é metabolizado nos rins", correct: false },
-      ],
-      feedback: "A barreira hematoencefálica protege o cérebro, mas alguns fármacos conseguem atravessá-la para agir no sistema nervoso."
-    },
-    {
-      text: "Qual é o efeito adverso comum dos antipsicóticos no sistema nervoso motor?",
-      options: [
-        { text: "Parkinsonismo", correct: true },
-        { text: "Convulsões", correct: false },
-        { text: "Alucinações", correct: false },
-      ],
-      feedback: "Antipsicóticos podem causar sintomas extrapiramidais, como o parkinsonismo."
-    },
-    {
-      text: "Em que animal o sistema nervoso foi fundamentalmente estudado para entender a sinapse química?",
-      options: [
-        { text: "Polvo", correct: true },
-        { text: "Cachorro", correct: false },
-        { text: "Gato", correct: false },
-      ],
-      feedback: "O polvo gigante foi usado por Hodgkin e Huxley para entender a transmissão nervosa e as sinapses."
-    },
+        { text: "A menor unidade muscular", correct: false },
+        { text: "A junção entre dois neurônios", correct: true },
+        { text: "O processo de respiração celular", correct: false },
+        { text: "Um tipo de osso", correct: false }
+      ]
+    }
   ],
-
   "Sistema Respiratório": [
     {
-      text: "Qual medicamento é utilizado como broncodilatador para crises de asma?",
+      text: "Qual é o principal órgão do sistema respiratório?",
       options: [
-        { text: "Salbutamol", correct: true },
-        { text: "Paracetamol", correct: false },
-        { text: "Ibuprofeno", correct: false },
-      ],
-      feedback: "Salbutamol é um broncodilatador que relaxa os músculos das vias aéreas, facilitando a respiração."
+        { text: "Coração", correct: false },
+        { text: "Pulmões", correct: true },
+        { text: "Fígado", correct: false },
+        { text: "Rins", correct: false }
+      ]
     },
     {
-      text: "O que causou a pandemia de gripe em 1918, que afetou milhões mundialmente?",
+      text: "Qual gás é absorvido pelo corpo durante a respiração?",
       options: [
-        { text: "H1N1", correct: true },
-        { text: "H5N1", correct: false },
-        { text: "SARS-CoV-2", correct: false },
-      ],
-      feedback: "O vírus H1N1 causou a pandemia de gripe espanhola em 1918."
+        { text: "Dióxido de carbono", correct: false },
+        { text: "Nitrogênio", correct: false },
+        { text: "Oxigênio", correct: true },
+        { text: "Metano", correct: false }
+      ]
     },
     {
-      text: "Qual animal é usado para testar vacinas respiratórias por sua similaridade com humanos?",
+      text: "O que é a inspiração?",
       options: [
-        { text: "Porco", correct: true },
-        { text: "Galinha", correct: false },
-        { text: "Cachorro", correct: false },
-      ],
-      feedback: "Porcos possuem sistema respiratório semelhante ao humano e são usados em pesquisas."
+        { text: "O ato de expirar o ar", correct: false },
+        { text: "O ato de inalar o ar", correct: true },
+        { text: "O ato de tossir", correct: false },
+        { text: "O ato de prender a respiração", correct: false }
+      ]
     },
     {
-      text: "Qual doença pulmonar crônica é causada principalmente pelo tabagismo?",
+      text: "Qual é a função do diafragma?",
       options: [
-        { text: "Asma", correct: false },
-        { text: "Doença Pulmonar Obstrutiva Crônica (DPOC)", correct: true },
-        { text: "Pneumonia", correct: false },
-      ],
-      feedback: "A DPOC é uma doença pulmonar obstrutiva causada principalmente pelo tabagismo."
-    },
-    {
-      text: "Qual é o papel dos corticosteroides inalados no tratamento respiratório?",
-      options: [
-        { text: "Reduzir inflamação", correct: true },
-        { text: "Dilatar brônquios", correct: false },
-        { text: "Eliminar infecções", correct: false },
-      ],
-      feedback: "Corticosteroides inalados reduzem a inflamação nas vias aéreas, controlando sintomas."
-    },
-    {
-      text: "Qual animal produz o veneno usado em pesquisas para tratar doenças respiratórias?",
-      options: [
-        { text: "Aranha", correct: false },
-        { text: "Escorpião", correct: true },
-        { text: "Cobras", correct: false },
-      ],
-      feedback: "O veneno de escorpião tem peptídeos que são estudados para tratar doenças respiratórias."
-    },
+        { text: "Proteger o estômago", correct: false },
+        { text: "Regular a pressão sanguínea", correct: false },
+        { text: "Ajudar na respiração", correct: true },
+        { text: "Sintetizar vitaminas", correct: false }
+      ]
+    }
   ],
-
   "Sistema Circulatório": [
     {
-      text: "Qual medicamento é usado para afinar o sangue e prevenir trombose?",
+      text: "Qual é o principal órgão do sistema circulatório?",
       options: [
-        { text: "Varfarina", correct: true },
-        { text: "Amoxicilina", correct: false },
-        { text: "Paracetamol", correct: false },
-      ],
-      feedback: "Varfarina é um anticoagulante usado para prevenir coágulos sanguíneos."
+        { text: "Fígado", correct: false },
+        { text: "Pulmões", correct: false },
+        { text: "Coração", correct: true },
+        { text: "Cérebro", correct: false }
+      ]
     },
     {
-      text: "Qual animal tem um coração simples, usado para estudar arritmias?",
+      text: "Qual é a função do coração?",
       options: [
-        { text: "Peixe-zebra", correct: true },
-        { text: "Rato", correct: false },
-        { text: "Cavalo", correct: false },
-      ],
-      feedback: "Peixe-zebra é usado em pesquisas cardiovasculares pela simplicidade do seu coração."
+        { text: "Filtrar o sangue", correct: false },
+        { text: "Produzir hormônios", correct: false },
+        { text: "Bombear sangue para todo o corpo", correct: true },
+        { text: "Armazenar gordura", correct: false }
+      ]
     },
     {
-      text: "Qual evento histórico foi marcado pelo uso do medicamento digitalina?",
+      text: "O que são artérias?",
       options: [
-        { text: "Tratamento de insuficiência cardíaca no século XVIII", correct: true },
-        { text: "Vacinação contra a varíola", correct: false },
-        { text: "Descoberta da penicilina", correct: false },
-      ],
-      feedback: "A digitalina, extraída da planta Dedaleira, foi usada desde o século XVIII para insuficiência cardíaca."
+        { text: "Vasos que levam sangue do coração para o corpo", correct: true },
+        { text: "Vasos que levam sangue para o coração", correct: false },
+        { text: "Células que transportam oxigênio", correct: false },
+        { text: "Tecidos que se contraem", correct: false }
+      ]
     },
     {
-      text: "Qual é o principal efeito dos beta-bloqueadores no sistema circulatório?",
+      text: "Qual é a principal função dos glóbulos vermelhos?",
       options: [
-        { text: "Reduzir pressão arterial", correct: true },
-        { text: "Aumentar frequência cardíaca", correct: false },
-        { text: "Dilatar vasos sanguíneos", correct: false },
-      ],
-      feedback: "Beta-bloqueadores diminuem a frequência cardíaca e a pressão arterial."
-    },
-    {
-      text: "O que significa o termo 'infarto do miocárdio'?",
-      options: [
-        { text: "Ataque cardíaco causado por obstrução das artérias", correct: true },
-        { text: "Inflamação do coração", correct: false },
-        { text: "Insuficiência cardíaca", correct: false },
-      ],
-      feedback: "Infarto do miocárdio ocorre quando uma artéria coronária é bloqueada, causando morte do tecido cardíaco."
-    },
-    {
-      text: "Qual animal tem um sistema circulatório aberto, diferente dos humanos?",
-      options: [
-        { text: "Insetos", correct: true },
-        { text: "Cães", correct: false },
-        { text: "Aves", correct: false },
-      ],
-      feedback: "Insetos possuem sistema circulatório aberto, onde o sangue não circula por vasos fechados."
-    },
+        { text: "Combater infecções", correct: false },
+        { text: "Ajudar na coagulação", correct: false },
+        { text: "Transportar oxigênio", correct: true },
+        { text: "Digestionar nutrientes", correct: false }
+      ]
+    }
   ],
-
   "Sistema Digestivo": [
     {
-      text: "Qual enzima é responsável por iniciar a digestão de proteínas no estômago?",
+      text: "Onde começa o processo de digestão?",
       options: [
-        { text: "Pepsina", correct: true },
-        { text: "Amilase", correct: false },
-        { text: "Lipase", correct: false },
-      ],
-      feedback: "A pepsina quebra proteínas em peptídeos menores no ambiente ácido do estômago."
+        { text: "No estômago", correct: false },
+        { text: "Na boca", correct: true },
+        { text: "No intestino delgado", correct: false },
+        { text: "No fígado", correct: false }
+      ]
     },
     {
-      text: "Qual animal tem um sistema digestivo com quatro estômagos para digestão de celulose?",
+      text: "Qual é a função do estômago?",
       options: [
-        { text: "Vaca", correct: true },
-        { text: "Cavalo", correct: false },
-        { text: "Porco", correct: false },
-      ],
-      feedback: "As vacas são ruminantes, com estômagos especializados para digerir celulose."
+        { text: "Absorver nutrientes", correct: false },
+        { text: "Digestionar proteínas e misturar alimentos", correct: true },
+        { text: "Armazenar bile", correct: false },
+        { text: "Produzir urina", correct: false }
+      ]
     },
     {
-      text: "Qual medicamento é usado para tratar úlcera gástrica reduzindo acidez?",
+      text: "O que acontece no intestino delgado?",
       options: [
-        { text: "Omeprazol", correct: true },
-        { text: "Paracetamol", correct: false },
-        { text: "Ibuprofeno", correct: false },
-      ],
-      feedback: "Omeprazol é um inibidor da bomba de prótons que reduz a produção de ácido no estômago."
+        { text: "A absorção da maioria dos nutrientes", correct: true },
+        { text: "A formação das fezes", correct: false },
+        { text: "A mastigação dos alimentos", correct: false },
+        { text: "A produção de saliva", correct: false }
+      ]
     },
     {
-      text: "Qual órgão produz a bile, importante para digestão de gorduras?",
+      text: "Qual órgão produz a bile para ajudar na digestão de gorduras?",
       options: [
-        { text: "Fígado", correct: true },
         { text: "Pâncreas", correct: false },
         { text: "Estômago", correct: false },
-      ],
-      feedback: "O fígado produz bile, que emulsifica gorduras para facilitar a digestão."
-    },
-    {
-      text: "Qual é a função do intestino delgado?",
-      options: [
-        { text: "Absorver nutrientes", correct: true },
-        { text: "Produzir enzimas", correct: false },
-        { text: "Armazenar gordura", correct: false },
-      ],
-      feedback: "O intestino delgado é o principal local de absorção dos nutrientes da alimentação."
-    },
-    {
-      text: "Qual animal é usado em pesquisas para estudar a microbiota intestinal humana?",
-      options: [
-        { text: "Camundongo", correct: true },
-        { text: "Galinha", correct: false },
-        { text: "Porco", correct: false },
-      ],
-      feedback: "Camundongos são usados como modelos para estudo da microbiota intestinal humana."
-    },
+        { text: "Fígado", correct: true },
+        { text: "Rim", correct: false }
+      ]
+    }
   ],
-
   "Sistema Urinário": [
     {
-      text: "Qual órgão é responsável pela filtração do sangue para formar a urina?",
+      text: "Qual é a função dos rins?",
       options: [
-        { text: "Rim", correct: true },
-        { text: "Bexiga", correct: false },
-        { text: "Ureter", correct: false },
-      ],
-      feedback: "Os rins filtram o sangue para eliminar resíduos através da urina."
+        { text: "Produzir hormônios do crescimento", correct: false },
+        { text: "Bombear sangue", correct: false },
+        { text: "Filtrar o sangue e remover resíduos", correct: true },
+        { text: "Ajudar na visão", correct: false }
+      ]
     },
     {
-      text: "Qual é a função da bexiga?",
+      text: "O que é a uretra?",
       options: [
-        { text: "Armazenar urina", correct: true },
-        { text: "Filtrar toxinas", correct: false },
-        { text: "Produzir urina", correct: false },
-      ],
-      feedback: "A bexiga armazena a urina até que seja eliminada."
+        { text: "Um músculo da perna", correct: false },
+        { text: "Um tubo que transporta a urina para fora do corpo", correct: true },
+        { text: "Uma parte do cérebro", correct: false },
+        { text: "Um osso do braço", correct: false }
+      ]
     },
     {
-      text: "Qual medicamento é usado para tratar infecção urinária?",
+      text: "O que é a bexiga?",
       options: [
-        { text: "Nitrofurantoína", correct: true },
-        { text: "Amoxicilina", correct: false },
-        { text: "Ibuprofeno", correct: false },
-      ],
-      feedback: "Nitrofurantoína é um antibiótico usado para tratar infecções do trato urinário."
+        { text: "Um órgão que produz enzimas digestivas", correct: false },
+        { text: "Um saco muscular que armazena a urina", correct: true },
+        { text: "Uma glândula endócrina", correct: false },
+        { text: "Uma parte do pulmão", correct: false }
+      ]
     },
     {
-      text: "Qual animal tem rins adaptados para conservar água em ambientes desérticos?",
+      text: "Como o corpo se livra do excesso de água e resíduos?",
       options: [
-        { text: "Camelo", correct: true },
-        { text: "Rato", correct: false },
-        { text: "Cavalo", correct: false },
-      ],
-      feedback: "Camelo possui rins que concentram urina para economizar água."
-    },
-    {
-      text: "O que é diurese?",
-      options: [
-        { text: "Formação de urina", correct: true },
-        { text: "Contração da bexiga", correct: false },
-        { text: "Absorção de nutrientes", correct: false },
-      ],
-      feedback: "Diurese é o processo de formação da urina nos rins."
-    },
-    {
-      text: "Qual hormônio regula a retenção de água nos rins?",
-      options: [
-        { text: "ADH (hormônio antidiurético)", correct: true },
-        { text: "Insulina", correct: false },
-        { text: "Adrenalina", correct: false },
-      ],
-      feedback: "O ADH aumenta a reabsorção de água nos rins para conservar líquidos."
-    },
+        { text: "Através da transpiração e da urina", correct: true },
+        { text: "Através da respiração", correct: false },
+        { text: "Através da digestão", correct: false },
+        { text: "Através do coração", correct: false }
+      ]
+    }
   ],
-
   "Sistema Endócrino": [
     {
-      text: "Qual glândula é conhecida como 'glândula mestre' por controlar outras glândulas?",
+      text: "Qual é a função do sistema endócrino?",
       options: [
-        { text: "Hipófise", correct: true },
+        { text: "Coordenar movimentos", correct: false },
+        { text: "Produzir hormônios para regular funções corporais", correct: true },
+        { text: "Ajudar a coagular o sangue", correct: false },
+        { text: "Bombear o coração", correct: false }
+      ]
+    },
+    {
+      text: "O que são hormônios?",
+      options: [
+        { text: "Sinais elétricos", correct: false },
+        { text: "Mensageiros químicos do corpo", correct: true },
+        { text: "Músculos do coração", correct: false },
+        { text: "Células ósseas", correct: false }
+      ]
+    },
+    {
+      text: "Qual glândula é conhecida como a 'glândula mestre'?",
+      options: [
         { text: "Tireoide", correct: false },
-        { text: "Adrenal", correct: false },
-      ],
-      feedback: "A hipófise regula outras glândulas endócrinas através da liberação de hormônios."
+        { text: "Pâncreas", correct: false },
+        { text: "Hipófise", correct: true },
+        { text: "Adrenal", correct: false }
+      ]
     },
     {
-      text: "Qual hormônio regula os níveis de açúcar no sangue?",
+      text: "Quais são as funções do pâncreas?",
       options: [
-        { text: "Insulina", correct: true },
-        { text: "Cortisol", correct: false },
-        { text: "Adrenalina", correct: false },
-      ],
-      feedback: "A insulina facilita a entrada de glicose nas células, reduzindo o açúcar no sangue."
-    },
-    {
-      text: "Qual animal tem um sistema endócrino usado para estudar diabetes?",
-      options: [
-        { text: "Camundongo", correct: true },
-        { text: "Cachorro", correct: false },
-        { text: "Coelho", correct: false },
-      ],
-      feedback: "Camundongos são modelos comuns para pesquisa em diabetes e sistema endócrino."
-    },
-    {
-      text: "Qual hormônio é liberado pela glândula adrenal em resposta ao estresse?",
-      options: [
-        { text: "Cortisol", correct: true },
-        { text: "Testosterona", correct: false },
-        { text: "Progesterona", correct: false },
-      ],
-      feedback: "O cortisol é o hormônio do estresse, liberado pelas glândulas adrenais."
-    },
-    {
-      text: "Qual doença é causada por deficiência de hormônio da tireoide na infância?",
-      options: [
-        { text: "Hipotireoidismo congênito", correct: true },
-        { text: "Diabetes tipo 1", correct: false },
-        { text: "Doença de Addison", correct: false },
-      ],
-      feedback: "Hipotireoidismo congênito causa atraso no desenvolvimento e problemas cognitivos se não tratado."
-    },
-    {
-      text: "Qual hormônio regula o ciclo menstrual no sistema reprodutor feminino?",
-      options: [
-        { text: "Estrogênio", correct: true },
-        { text: "Testosterona", correct: false },
-        { text: "Insulina", correct: false },
-      ],
-      feedback: "O estrogênio é fundamental para o desenvolvimento e regulação do ciclo menstrual."
-    },
+        { text: "Produzir insulina e enzimas digestivas", correct: true },
+        { text: "Filtrar o sangue", correct: false },
+        { text: "Bombear o coração", correct: false },
+        { text: "Armazenar cálcio", correct: false }
+      ]
+    }
   ],
-
   "Sistema Reprodutor": [
     {
-      text: "Qual hormônio é fundamental para a produção de espermatozoides nos homens?",
+      text: "Qual hormônio é responsável pelas características sexuais masculinas?",
       options: [
+        { text: "Estrogênio", correct: false },
         { text: "Testosterona", correct: true },
-        { text: "Estrogênio", correct: false },
-        { text: "Progesterona", correct: false },
-      ],
-      feedback: "A testosterona estimula a produção de espermatozoides e características sexuais masculinas."
+        { text: "Insulina", correct: false },
+        { text: "Progesterona", correct: false }
+      ]
     },
     {
-      text: "Qual método contraceptivo age inibindo a ovulação?",
+      text: "Qual órgão produz os espermatozoides?",
       options: [
-        { text: "Pílula anticoncepcional", correct: true },
-        { text: "Preservativo", correct: false },
-        { text: "DIU de cobre", correct: false },
-      ],
-      feedback: "A pílula anticoncepcional contém hormônios que inibem a ovulação."
+        { text: "Pênis", correct: false },
+        { text: "Testículos", correct: true },
+        { text: "Próstata", correct: false },
+        { text: "Útero", correct: false }
+      ]
     },
     {
-      text: "Qual animal é usado em pesquisas para entender o ciclo menstrual humano?",
+      text: "Qual hormônio é responsável pelas características sexuais femininas?",
       options: [
-        { text: "Macaco", correct: true },
-        { text: "Cavalo", correct: false },
-        { text: "Cachorro", correct: false },
-      ],
-      feedback: "Macacos compartilham ciclos menstruais semelhantes aos humanos, usados em pesquisas."
-    },
-    {
-      text: "Qual hormônio é responsável pelo desenvolvimento das características femininas?",
-      options: [
-        { text: "Estrogênio", correct: true },
         { text: "Testosterona", correct: false },
-        { text: "Progesterona", correct: false },
-      ],
-      feedback: "O estrogênio promove o desenvolvimento das características sexuais femininas."
+        { text: "Adrenalina", correct: false },
+        { text: "Estrogênio", correct: true },
+        { text: "Cortisol", correct: false }
+      ]
     },
     {
-      text: "O que é a gravidez ectópica?",
+      text: "Onde ocorre a fertilização?",
       options: [
-        { text: "Implantação do embrião fora do útero", correct: true },
-        { text: "Gravidez múltipla", correct: false },
-        { text: "Aborto espontâneo", correct: false },
-      ],
-      feedback: "Gravidez ectópica ocorre quando o embrião se implanta fora do útero, geralmente na trompa."
-    },
-    {
-      text: "Qual medicamento é utilizado para induzir o trabalho de parto?",
-      options: [
-        { text: "Ocitocina", correct: true },
-        { text: "Progestágeno", correct: false },
-        { text: "Estrogênio", correct: false },
-      ],
-      feedback: "A ocitocina estimula contrações uterinas para induzir o parto."
-    },
+        { text: "No útero", correct: false },
+        { text: "No ovário", correct: false },
+        { text: "Na vagina", correct: false },
+        { text: "Nas tubas uterinas", correct: true }
+      ]
+    }
   ],
-
   "Sistema Muscular": [
     {
-      text: "Qual tipo de músculo é responsável pelos movimentos voluntários do corpo?",
+      text: "Quantos músculos o corpo humano tem?",
       options: [
-        { text: "Músculo esquelético", correct: true },
-        { text: "Músculo liso", correct: false },
-        { text: "Músculo cardíaco", correct: false },
-      ],
-      feedback: "O músculo esquelético é controlado voluntariamente para movimentos conscientes."
+        { text: "Aproximadamente 206", correct: false },
+        { text: "Aproximadamente 400", correct: false },
+        { text: "Aproximadamente 650", correct: true },
+        { text: "Aproximadamente 1000", correct: false }
+      ]
     },
     {
-      text: "Qual medicamento é usado para relaxar músculos em casos de espasmos?",
+      text: "Quais são os três tipos de músculos?",
       options: [
-        { text: "Baclofeno", correct: true },
-        { text: "Ibuprofeno", correct: false },
-        { text: "Paracetamol", correct: false },
-      ],
-      feedback: "Baclofeno atua como relaxante muscular para tratar espasmos."
+        { text: "Voluntários, involuntários e mistos", correct: false },
+        { text: "Esquelético, liso e cardíaco", correct: true },
+        { text: "Fibras brancas, vermelhas e cinzentas", correct: false },
+        { text: "Longos, curtos e planos", correct: false }
+      ]
     },
     {
-      text: "Qual animal é usado para estudar regeneração muscular?",
+      text: "Qual é a função dos músculos esqueléticos?",
       options: [
-        { text: "Salmão", correct: false },
-        { text: "Axolote", correct: true },
-        { text: "Gato", correct: false },
-      ],
-      feedback: "Axolotes são estudados pela capacidade de regenerar músculos e tecidos."
+        { text: "Ajudar na digestão", correct: false },
+        { text: "Bombear o sangue", correct: false },
+        { text: "Permitir movimentos voluntários", correct: true },
+        { text: "Controlar a temperatura corporal", correct: false }
+      ]
     },
     {
-      text: "Qual é a proteína principal responsável pela contração muscular?",
+      text: "Qual é a principal proteína que compõe os músculos?",
       options: [
-        { text: "Actina e miosina", correct: true },
         { text: "Colágeno", correct: false },
-        { text: "Elastina", correct: false },
-      ],
-      feedback: "Actina e miosina são proteínas essenciais para a contração muscular."
-    },
-    {
-      text: "Qual doença muscular hereditária causa fraqueza progressiva?",
-      options: [
-        { text: "Distrofia muscular de Duchenne", correct: true },
-        { text: "Esclerose lateral amiotrófica", correct: false },
-        { text: "Artrite reumatoide", correct: false },
-      ],
-      feedback: "A distrofia muscular de Duchenne é uma doença genética que causa fraqueza muscular."
-    },
-    {
-      text: "Qual vitamina é essencial para a função muscular adequada?",
-      options: [
-        { text: "Vitamina D", correct: true },
-        { text: "Vitamina C", correct: false },
-        { text: "Vitamina B12", correct: false },
-      ],
-      feedback: "A vitamina D é importante para a saúde muscular e funcionamento dos nervos."
-    },
+        { text: "Queratina", correct: false },
+        { text: "Actina e Miosina", correct: true },
+        { text: "Elastina", correct: false }
+      ]
+    }
   ],
-
   "Sistema Esquelético": [
     {
-      text: "Qual mineral é fundamental para a formação dos ossos?",
+      text: "Quantos ossos um adulto tem?",
       options: [
-        { text: "Cálcio", correct: true },
-        { text: "Ferro", correct: false },
-        { text: "Potássio", correct: false },
-      ],
-      feedback: "O cálcio é essencial para a estrutura e resistência dos ossos."
+        { text: "300", correct: false },
+        { text: "206", correct: true },
+        { text: "150", correct: false },
+        { text: "400", correct: false }
+      ]
     },
     {
-      text: "Qual vitamina auxilia na absorção do cálcio?",
+      text: "Qual é a principal função do esqueleto?",
       options: [
-        { text: "Vitamina D", correct: true },
-        { text: "Vitamina A", correct: false },
-        { text: "Vitamina C", correct: false },
-      ],
-      feedback: "A vitamina D facilita a absorção do cálcio no intestino."
+        { text: "Produzir hormônios", correct: false },
+        { text: "Dar suporte, proteger órgãos e permitir movimentos", correct: true },
+        { text: "Transportar oxigênio", correct: false },
+        { text: "Controlar a temperatura corporal", correct: false }
+      ]
     },
     {
-      text: "Qual é a doença caracterizada pela perda da densidade óssea?",
+      text: "Quais são os principais componentes do esqueleto?",
       options: [
-        { text: "Osteoporose", correct: true },
-        { text: "Artrite", correct: false },
-        { text: "Gota", correct: false },
-      ],
-      feedback: "Osteoporose deixa os ossos frágeis e propensos a fraturas."
+        { text: "Coração, pulmões e fígado", correct: false },
+        { text: "Células sanguíneas", correct: false },
+        { text: "Ossos, cartilagens e ligamentos", correct: true },
+        { text: "Músculos e tendões", correct: false }
+      ]
     },
     {
-      text: "Qual animal tem o esqueleto interno, como os humanos?",
+      text: "O que é a medula óssea?",
       options: [
-        { text: "Peixe ósseo", correct: true },
-        { text: "Inseto", correct: false },
-        { text: "Polvo", correct: false },
-      ],
-      feedback: "Peixes ósseos possuem esqueleto interno semelhante ao dos humanos."
-    },
-    {
-      text: "Qual medicamento é usado para tratar osteoporose?",
-      options: [
-        { text: "Bifosfonatos", correct: true },
-        { text: "Antibióticos", correct: false },
-        { text: "Analgesicos", correct: false },
-      ],
-      feedback: "Bifosfonatos ajudam a prevenir a perda óssea em osteoporose."
-    },
-    {
-      text: "Qual é a função principal do sistema esquelético?",
-      options: [
-        { text: "Suporte e proteção do corpo", correct: true },
-        { text: "Produção de hormônios", correct: false },
-        { text: "Contração muscular", correct: false },
-      ],
-      feedback: "O sistema esquelético dá suporte estrutural e protege órgãos internos."
-    },
+        { text: "O tecido que conecta os ossos", correct: false },
+        { text: "O tecido macio dentro dos ossos que produz células sanguíneas", correct: true },
+        { text: "O tecido que reveste a pele", correct: false },
+        { text: "O tecido que armazena gordura", correct: false }
+      ]
+    }
   ],
-
   "Sistema Imunológico": [
     {
-      text: "Qual célula é a principal responsável pela resposta imune adaptativa?",
+      text: "Qual é a função do sistema imunológico?",
       options: [
-        { text: "Linfócito T", correct: true },
-        { text: "Neutrófilo", correct: false },
-        { text: "Eritrócito", correct: false },
-      ],
-      feedback: "Linfócitos T reconhecem e atacam células infectadas ou estranhas."
+        { text: "Digestionar alimentos", correct: false },
+        { text: "Proteger o corpo contra doenças e infecções", correct: true },
+        { text: "Bombear sangue", correct: false },
+        { text: "Regular o humor", correct: false }
+      ]
     },
     {
-      text: "Qual vacina ajudou a erradicar a varíola?",
+      text: "O que são anticorpos?",
       options: [
-        { text: "Vacina de Jenner", correct: true },
-        { text: "Vacina contra gripe", correct: false },
-        { text: "Vacina de poliomielite", correct: false },
-      ],
-      feedback: "Edward Jenner desenvolveu a primeira vacina eficaz contra varíola."
+        { text: "Um tipo de hormônio", correct: false },
+        { text: "Proteínas que combatem agentes infecciosos", correct: true },
+        { text: "Células musculares", correct: false },
+        { text: "Partes do DNA", correct: false }
+      ]
     },
     {
-      text: "Qual animal foi usado por Jenner para criar a vacina da varíola?",
+      text: "O que são glóbulos brancos?",
       options: [
-        { text: "Vaca", correct: true },
-        { text: "Cavalo", correct: false },
-        { text: "Porco", correct: false },
-      ],
-      feedback: "Jenner usou vírus da varíola bovina (vaca) para imunizar humanos contra varíola."
+        { text: "Células que transportam oxigênio", correct: false },
+        { text: "Células que combatem infecções", correct: true },
+        { text: "Células que ajudam na coagulação do sangue", correct: false },
+        { text: "Células que armazenam gordura", correct: false }
+      ]
     },
     {
-      text: "O que é imunidade passiva?",
+      text: "Qual é a diferença entre imunidade inata e adquirida?",
       options: [
-        { text: "Receber anticorpos prontos", correct: true },
-        { text: "Produzir anticorpos após vacinação", correct: false },
-        { text: "Infecção natural", correct: false },
-      ],
-      feedback: "Imunidade passiva ocorre quando anticorpos são fornecidos externamente, como soro."
-    },
-    {
-      text: "Qual tipo de célula produz anticorpos?",
-      options: [
-        { text: "Plasmócitos", correct: true },
-        { text: "Macrófagos", correct: false },
-        { text: "Neutrófilos", correct: false },
-      ],
-      feedback: "Plasmócitos são células derivadas dos linfócitos B que produzem anticorpos."
-    },
-    {
-      text: "Qual é o efeito da vacina no sistema imunológico?",
-      options: [
-        { text: "Estimular a memória imunológica", correct: true },
-        { text: "Destruir linfócitos", correct: false },
-        { text: "Inibir produção de anticorpos", correct: false },
-      ],
-      feedback: "Vacinas treinam o sistema imunológico para reconhecer e responder a patógenos."
-    },
+        { text: "Inata é para vírus, adquirida é para bactérias", correct: false },
+        { text: "Inata é a defesa geral; adquirida é específica, criada após exposição a um patógeno", correct: true },
+        { text: "Inata é para adultos, adquirida é para crianças", correct: false },
+        { text: "Não há diferença, são a mesma coisa", correct: false }
+      ]
+    }
   ]
 };
+
+let currentQuestionIndex = 0;
+let currentSystem = '';
+let score = 0;
+let userAnswers = [];
 
 function startGame() {
   document.getElementById("start-btn").classList.add("hidden");
@@ -598,27 +413,87 @@ function clearChallengeArea() {
 function startChallenge(system) {
   document.getElementById("system-selection").classList.add("hidden");
   document.getElementById("challenge-area").classList.remove("hidden");
+  currentSystem = system;
+  currentQuestionIndex = 0;
+  score = 0;
+  userAnswers = [];
+  loadQuestion();
+}
+
+function loadQuestion() {
   clearChallengeArea();
-
-  const challenge = challenges[system];
-
+  const challenge = challenges[currentSystem][currentQuestionIndex];
   if (!challenge) {
-    document.getElementById("challenge-text").textContent = "Desafio não disponível ainda para este sistema.";
+    showFinalResults();
     return;
   }
 
   document.getElementById("challenge-text").textContent = challenge.text;
 
   const optionsDiv = document.getElementById("options");
-  challenge.options.forEach(opt => {
+  challenge.options.forEach((opt) => {
     const btn = document.createElement("button");
     btn.textContent = opt.text;
-    btn.onclick = () => showFeedback(opt.correct, challenge.feedback);
+    btn.onclick = () => handleAnswer(opt);
     optionsDiv.appendChild(btn);
   });
 }
 
-function showFeedback(isCorrect, feedback) {
-  const msg = isCorrect ? "✅ Correto! " : "❌ Incorreto. ";
-  document.getElementById("feedback").textContent = msg + feedback;
+function handleAnswer(selectedOption) {
+  const currentQuestionData = challenges[currentSystem][currentQuestionIndex];
+  const isCorrect = selectedOption.correct;
+  userAnswers.push({
+    question: currentQuestionData.text,
+    userAnswer: selectedOption.text,
+    isCorrect: isCorrect,
+    correctAnswer: currentQuestionData.options.find(opt => opt.correct).text
+  });
+
+  if (isCorrect) {
+    score++;
+  }
+
+  // Desabilitar botões de opção após a resposta
+  const optionButtons = document.querySelectorAll("#options button");
+  optionButtons.forEach(btn => btn.disabled = true);
+  
+  // Esperar um pouco antes de carregar a próxima pergunta
+  setTimeout(() => {
+    currentQuestionIndex++;
+    loadQuestion();
+  }, 500); 
+}
+
+function showFinalResults() {
+  clearChallengeArea();
+  document.getElementById("challenge-text").textContent = `Fim do desafio!`;
+  
+  const totalQuestions = challenges[currentSystem].length;
+  document.getElementById("feedback").textContent = `Você acertou ${score} de ${totalQuestions} perguntas.`;
+
+  const resultsList = document.createElement("ul");
+  userAnswers.forEach((answer) => {
+    const listItem = document.createElement("li");
+    let icon = answer.isCorrect ? "✅" : "❌";
+    
+    if (answer.isCorrect) {
+      listItem.innerHTML = `<strong>${answer.question}</strong><br>
+                           Sua resposta: ${answer.userAnswer} ${icon}`;
+    } else {
+      listItem.innerHTML = `<strong>${answer.question}</strong><br>
+                           Sua resposta: ${answer.userAnswer} ${icon}<br>
+                           Resposta correta: ${answer.correctAnswer}`;
+    }
+    resultsList.appendChild(listItem);
+  });
+  document.getElementById("options").appendChild(resultsList);
+
+  // Botão para voltar para seleção de sistemas
+  const backBtn = document.createElement("button");
+  backBtn.textContent = "Escolher outro sistema";
+  backBtn.onclick = () => {
+    document.getElementById("challenge-area").classList.add("hidden");
+    document.getElementById("system-selection").classList.remove("hidden");
+  };
+  document.getElementById("options").appendChild(backBtn);
 }
